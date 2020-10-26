@@ -1,0 +1,65 @@
+# section information
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+# your designation
+designation: Data Scientist Manager
+# your company information
+company:
+  name: Farfetch
+  url: "https://www.farfetch.com"
+
+# your resume. this file path should be relative to you "static" directory
+resume: "files/CV.pdf"
+
+# a summary about you
+summary: 'Data Science Manager at Farfetch. Research interest in Machine Learning and Computer Vision, published 30 articles in journals, conferences and book chapters, and organized 5 events (being VISUM - VISion Understanding and Machine intelligence - a pivotal summer school in Computer Vision in the North region of Portugal).'
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+socialLinks:
+- name: Email
+  icon: "fas fa-envelope"
+  url: "rsousa@rsousa.org"
+
+- name: Github
+  icon: "fab fa-github"
+  url: "https://www.github.com/rjgsousa"
+
+- name: Stackoverflow
+  icon: "fab fa-stack-overflow"
+  url: "#"
+
+- name: LinkedIn
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/rjgsousa"
+
+- name: Twitter
+  icon: "fab fa-twitter"
+  url: "https://twitter.com/rjgsousa"
+
+- name: Instagram
+  icon: "fab fa-instagram"
+  url: "https://instagram.com/rjgsousa"
+
+# your soft skills
+# give the percentage between 50 to 100 with 5 intervals.
+# currently supported colors: blue, yellow, pink, green, sky, orange
+softSkills:
+- name: Reading
+  percentage: 85
+  color: yellow
+- name: Travelling
+  percentage: 95
+  color: pink
+- name: Photography
+  percentage: 80
+  color: green
+- name: Learning
+  percentage: 90
+  color: sky
