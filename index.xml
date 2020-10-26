@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ricardo G. Sousa</title>
+    <link>http://rjgsousa.github.io/</link>
+    <description>Recent content on Ricardo G. Sousa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 Oct 2020 06:00:23 +0600</lastBuildDate>
+    
+	<atom:link href="http://rjgsousa.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Remote Work</title>
+      <link>http://rjgsousa.github.io/posts/remote-work/</link>
+      <pubDate>Sun, 25 Oct 2020 06:00:23 +0600</pubDate>
+      
+      <guid>http://rjgsousa.github.io/posts/remote-work/</guid>
+      <description>Some of us have been forced by the pandemic to work in a new reality. Even though forced work from home != remote work, I would like to reinforce some practices that are in place in some well-known companies with distributed teams.
+Acknowledgments: This page would not be possible without the collaboration and discussions with Nuno Santos, Silvia Bessa and Ana Rebelo
+Setup Chat Slack, Discord
+Video Conference Google Meets, Zoom</description>
+    </item>
+    
+  </channel>
+</rss>
