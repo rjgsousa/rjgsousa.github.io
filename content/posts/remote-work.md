@@ -28,11 +28,13 @@ Google Meets, Zoom
 Git, duh!
 
 ## Tooling
-#### Pair Programming [[1](#pair-programming)]
+#### Pair Programming
+More tools listed in [[1](#pair-programming)]
 - https://coderpad.io/
 - https://tmate.io/
 
-#### Meetings, brainstorm sessions and other ceremonies [[6](#tools)]
+#### Meetings, brainstorm sessions and other ceremonies
+Other tools, in [[6](#tools)]
 - WhiteBoard
 - IdeaBoardz 
 - Miro
