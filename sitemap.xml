@@ -3,8 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rjgsousa.github.io/posts/meetings/</loc>
+    <lastmod>2020-11-22T06:00:23+06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rjgsousa.github.io/posts/</loc>
-    <lastmod>2020-10-25T06:00:23+06:00</lastmod>
+    <lastmod>2020-11-22T06:00:23+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rjgsousa.github.io/</loc>
+    <lastmod>2020-11-22T06:00:23+06:00</lastmod>
   </url>
   
   <url>
@@ -13,12 +23,11 @@
   </url>
   
   <url>
-    <loc>https://rjgsousa.github.io/</loc>
-    <lastmod>2020-10-25T06:00:23+06:00</lastmod>
+    <loc>https://rjgsousa.github.io/categories/</loc>
   </url>
   
   <url>
-    <loc>https://rjgsousa.github.io/categories/</loc>
+    <loc>https://rjgsousa.github.io/patterns/</loc>
   </url>
   
   <url>
