@@ -5,8 +5,9 @@ hero: /images/posts/remote-work/remote-work.png
 description: Tips for remote work and distributed teams
 menu:
   sidebar:
-    name: Practices
-    identifier: remote-work
+    name: Remote Work
+    identifier: how-to-remote-working
+    parent: patterns
     weight: 500
 ---
 
