@@ -35,25 +35,25 @@ Git, duh!
 #### Meetings, brainstorm sessions and other ceremonies
 - WhiteBoard
 - IdeaBoardz [6 for others]
-- Miro (free as in beer)
+- Miro
 
 
 ## Patterns
 
-* Over-communicate - Communicate with your team mates like you do in the office and do it more often
-* Give the benefit of a doubt. In e-mails and chats there’s lot that is lost in messages (e.g., expressions, cultural differences). Assume the best intentions of your peers.
-* Fear of missing out: An increasing concern in remote teams - establish working agreements like flexible working hours [7]; if a decision needs to be made, set up a working plan, deadlines and meeting/brainstorm sessions - if necessary - to write it down. Give your team and colleagues time to digest the information.
-* Practice active listening and speak slowly and calmly, give some short spaces with no talk and some silence in between each intervention (e.g., eventual lag in video call) [2]
-* Team ceremonies (Daily stand-up, item refinements and retrospective meetings) - continue to do it or be more involved. Dailies are team’s heartbeat [2]. 
- * Connect your camera, we are all humans (If they don’t have a headset or webcam turned on, it’s a bit of a smell   [5])
- * Get a headset 
- * :bulb: be funny, sociable. 
-* Keep your Focus and plan better (not more) - Try Pomodoro technique to have periods of work and small breaks [2]
- * Define priorities and adjust accordingly
- * Small, minor tasks, leave to the end of the week - usually on a Friday afternoon 
-* Socialise: Have social gatherings like you have in the office - Create opportunities for a cup of tea/coffee, biscuit [5]
- * Keep your reading/book clubs
- * Keep your team brainstorming sessions
+- Over-communicate - Communicate with your team mates like you do in the office and do it more often
+- Give the benefit of a doubt. In e-mails and chats there’s lot that is lost in messages (e.g., expressions, cultural differences). Assume the best intentions of your peers.
+- Fear of missing out: An increasing concern in remote teams - establish working agreements like flexible working hours [7]; if a decision needs to be made, set up a working plan, deadlines and meeting/brainstorm sessions - if necessary - to write it down. Give your team and colleagues time to digest the information.
+- Practice active listening and speak slowly and calmly, give some short spaces with no talk and some silence in between each intervention (e.g., eventual lag in video call) [2]
+- Team ceremonies (Daily stand-up, item refinements and retrospective meetings) - continue to do it or be more involved. Dailies are team’s heartbeat [2]. 
+  - Connect your camera, we are all humans (If they don’t have a headset or webcam turned on, it’s a bit of a smell   [5])
+  - Get a headset 
+  - :bulb: be funny, sociable. 
+- Keep your Focus and plan better (not more) - Try Pomodoro technique to have periods of work and small breaks [2]
+  - Define priorities and adjust accordingly
+  - Small, minor tasks, leave to the end of the week - usually on a Friday afternoon 
+- Socialise: Have social gatherings like you have in the office - Create opportunities for a cup of tea/coffee, biscuit [5]
+  - Keep your reading/book clubs
+  - Keep your team brainstorming sessions
 
 ## References
 - [Git] Pair Programming - https://github.com/kkemple/awesome-pair-programming
