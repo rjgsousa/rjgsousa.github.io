@@ -45,7 +45,7 @@ Git, duh!
 - Fear of missing out: An increasing concern in remote teams - establish working agreements like flexible working hours [7]; if a decision needs to be made, set up a working plan, deadlines and meeting/brainstorm sessions - if necessary - to write it down. Give your team and colleagues time to digest the information.
 - Practice active listening and speak slowly and calmly, give some short spaces with no talk and some silence in between each intervention (e.g., eventual lag in video call) [[2](#tips-remote-work)]
 - Team ceremonies (Daily stand-up, item refinements and retrospective meetings) - continue to do it or be more involved. Dailies are team’s heartbeat [[2](#tips-remote-work)]. 
-  - Connect your camera, we are all humans (If they don’t have a headset or webcam turned on, it’s a bit of a smell [[5]#social])
+  - Connect your camera, we are all humans (If they don’t have a headset or webcam turned on, it’s a bit of a smell [[5](#social)])
   - Get a headset 
   - :bulb: be funny, sociable. 
 - Keep your Focus and plan better (not more) - Try Pomodoro technique to have periods of work and small breaks [[2](#tips-remote-work)]
