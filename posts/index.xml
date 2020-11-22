@@ -6,21 +6,17 @@
     <description>Recent content in Posts on Ricardo G. Sousa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Oct 2020 06:00:23 +0600</lastBuildDate>
-    
-	<atom:link href="https://rjgsousa.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 25 Oct 2020 06:00:23 +0600</lastBuildDate><atom:link href="https://rjgsousa.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Remote Work</title>
       <link>https://rjgsousa.github.io/posts/remote-work/</link>
       <pubDate>Sun, 25 Oct 2020 06:00:23 +0600</pubDate>
       
       <guid>https://rjgsousa.github.io/posts/remote-work/</guid>
-      <description>Some of us have been forced by the pandemic to work in a new reality. Even though forced work from home != remote work, I would like to reinforce some practices that are in place in some well-known companies with distributed teams.
+      <description>Some of us have been forced by the pandemic to work in a new reality. Even though forced work from home != remote work, I would like to reinforce some practices that are in place in workplaces with distributed teams.
 Acknowledgments: This page would not be possible without the collaboration and discussions with Nuno Santos, Silvia Bessa and Ana Rebelo
-Setup Chat Slack, Discord
-Video Conference Google Meets, Zoom</description>
+Setup Chat Slack, Microsoft Teams, Discord
+Slack/Microsoft Teams are currently the go-to apps for teams communications.</description>
     </item>
     
   </channel>
