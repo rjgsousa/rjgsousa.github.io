@@ -36,9 +36,7 @@ Ok, so you have decided to schedule a meeting. What's next?
 
 1. **Pre-Read & Agenda** - Share any information that attendees should know and/or read ahead of meeting; define an agenda/order of business before the meeting;
 
-1. **Time** - in a distributed team in different timezones, be clear on the time and avoid jargon such as “the first hour of the morning”, “CoP”; Avoid back and forth emails, and use an app such as https://calendly.com/ when having a meeting with externals; avoid back-to-back meetings; Another tool of choice is the clockwise (for more ideas, please have a look into the No Meeting Day page).
-
- 
+1. **Time** - in a distributed team in different timezones, be clear on the time and avoid jargon such as "the first hour of the morning", "CoP"; Avoid back and forth emails, and use an app such as https://calendly.com/ when having a meeting with externals; avoid back-to-back meetings; Another tool of choice is the clockwise.
 
 ## Meeting
 We are now having the meeting. What should you expect?
@@ -47,17 +45,15 @@ We are now having the meeting. What should you expect?
 
 1. **Coordination** - Have the agenda ready. You should be flexible, though. If there aren’t items in the agenda ask the ones that are already on the meeting to add their items while others join;
 
-1. **Time and Be respectful** - Start after three minutes “out of respect for those who were punctual” - people that run late will add their items to the agenda by order;
+1. **Time and Be respectful** - Start after three minutes "out of respect for those who were punctual" - people that run late will add their items to the agenda by order;
 
 1. **Taking Notes** - Notes or meeting minute is a burden. If it falls all under one single person, that one will be responsible to pay attention to the conversation and write the details of the meeting in a clear, concise and precise way! If it fails, the blame will fall onto that person. Do it collaboratively as a group-editable meeting minute. Notes are essential for participants that couldn’t attend where they can refer to learn what was discussed and decided.
 
-1. **No meeting high-jacking!** - is when someone prevents a meeting from covering scheduled topics until their (unscheduled) topics are covered first. Avoid the potential risk of creating a culture of participants attending a meeting “just in case”. If you run in any off-topics items added to the agenda, ask “is this quick and are all stakeholders here?”
-
- 
+1. **No meeting high-jacking!** - is when someone prevents a meeting from covering scheduled topics until their (unscheduled) topics are covered first. Avoid the potential risk of creating a culture of participants attending a meeting "just in case". If you run in any off-topics items added to the agenda, ask "is this quick and are all stakeholders here?"
 
 ## Quotes
 
-“Walk out of a meeting or drop off a call as soon as it is obvious you aren’t adding value. It is not rude to leave, it is rude to make someone stay and waste their time” - Elon Musk
+"Walk out of a meeting or drop off a call as soon as it is obvious you aren’t adding value. It is not rude to leave, it is rude to make someone stay and waste their time" - Elon Musk
 
 ## References
 :book: Distributed Teams: The Art and Practice of Working Together While Physically Apart by John O'Duinn
