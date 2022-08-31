@@ -18,14 +18,20 @@ company:
 resume: "files/CV.pdf"
 
 # a summary about you
-summary: 'Data Science Manager at Farfetch. Research interest in Machine Learning and Computer Vision, published 30 articles in journals, conferences and book chapters, and organized 5 events (being VISUM - VISion Understanding and Machine intelligence - a pivotal summer school in Computer Vision in the North region of Portugal).'
+summary: 'I am an accomplished Principal Scientist/Research Scientist who is passionate
+about delivering value through data and AI/ML methods. I am a fan of innovativePorto
+and disruptive technologies who is eager to push boundaries. Bringing forth a
+proven track record of managing and project coordination and, serving as a
+strong adviser, I easily communicate and collaborate with stakeholders who are
+laser-focused on critical pain points and eager to improve user experience through
+novel AI/ML and computer vision-powered products.'
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
 socialLinks:
 - name: Email
   icon: "fas fa-envelope"
-  url: "rsousa@rsousa.org"
+  url: "ricardo@rsousa.co"
 
 - name: Github
   icon: "fab fa-github"
