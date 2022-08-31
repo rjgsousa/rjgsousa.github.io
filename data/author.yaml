@@ -6,7 +6,7 @@ greeting: "Hi, I am"
 image: "images/avatar.png"
 # give your some contact information. they will be used in the footer
 contactInfo:
-  email: "rsousa <at> rsousa.org"
+  email: "ricardo <at> rsousa.co"
 
 # some summary about what you do
 summary:
