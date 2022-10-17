@@ -1,0 +1,39 @@
+# section information
+section:
+  name: Publications
+  id: publications
+  enable: true
+  weight: 3
+  showOnNavbar: true
+
+# filter buttons
+buttons:
+  - name: All
+    filter: "all"
+  - name: "Machine Learning"
+    filter: "machinelearning"
+  - name: "Computer Vision"
+    filter: "computer-vision"
+
+publications:
+  - title: "iFetch: Multimodal Conversational Agents for the Online Fashion Marketplace."
+    publishedIn:
+      name: "MuCAI'21: Proceedings of the 2nd ACM Multimedia Workshop on Multimodal Conversational AI, Virtual Event, China"
+      date: "20 October 2021"
+      url: "https://doi.org/10.1145/3475959.3485395"
+    authors:
+      - name: "Sousa, Ricardo Gamelas"
+      - name: "Ferreira, Pedro Miguel"
+      - name: "Costa, Pedro Moreira"
+      - name: "Azevedo, Pedro"
+      - name: "Costeira, João Paulo"
+      - name: "Santiago, Carlos"
+      - name: "Magalhães, João"
+      - name: "Semedo, David"
+      - name: "Ferreira, Rafael"
+      - name: "Rudnicky, Alexander I."
+      - name: "Hauptmann, Alexander G."
+    paper:
+        url: "https://rjgsousa.github.io/files/publications/2021.MuCAI.2021.pdf"
+    categories: ["machinelearning"]
+    tags: ["Machine Learning", "Conversational AI"]
