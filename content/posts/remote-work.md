@@ -1,7 +1,7 @@
 ---
 title: "Remote Work"
 date: 2020-10-25T06:00:23+06:00
-hero: /images/posts/remote-work/remote-work.png
+hero: /images/sections/posts/remote-work/remote-work.png
 description: Tips for remote work and distributed teams
 menu:
   sidebar:

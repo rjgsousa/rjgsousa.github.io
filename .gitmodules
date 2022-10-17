@@ -2,3 +2,6 @@
 	path = public
 	url = https://github.com/rjgsousa/rjgsousa.github.io.git
 	branch = master
+[submodule "themes/toha"]
+	path = themes/toha
+	url = https://github.com/hugo-toha/toha.git

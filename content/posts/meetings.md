@@ -1,7 +1,7 @@
 ---
 title: "Meetings"
 date: 2020-11-22T06:00:23+06:00
-hero: /images/posts/meetings/meeting.jpg
+hero: /images/sections/posts/meetings/meeting.jpg
 description: Tips for remote work and distributed teams
 menu:
   sidebar:
