@@ -7,47 +7,79 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 
-<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
-<link rel="stylesheet" href="/assets/css/style.css"/>
-<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
 
 
-<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+<link rel="stylesheet" href="/google-fonts/Mulish/mulish.css"/>
 
 
-<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
 
 
-<link rel="stylesheet" href="/assets/css/style.css"/>
 
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/site/favicon_hu60031865da73c331b33790c8e6d02fb7_3060_42x0_resize_box_3.png" />
+
+<meta property="og:title" content="Remote Work" />
+<meta property="og:description" content="Tips for remote work and distributed teams" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rjgsousa.github.io/posts/remote-work/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-10-25T06:00:23+06:00" />
+<meta property="article:modified_time" content="2020-10-25T06:00:23+06:00" />
+
+
+
+    
     
 <meta name="description" content="Tips for remote work and distributed teams" />
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
 />
-<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
-<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
 
 
     
+
+
+
+
     
-      
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-10658529-1', 'auto');
 	
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
-    
-  </head>
+</head>
 
   <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
     <div class="container-fluid bg-dimmed wrapper">
@@ -56,9 +88,29 @@ if (!doNotTrack) {
     
 
 
+
+
+
   
 
 
+  
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
   
 
 
@@ -68,7 +120,9 @@ if (!doNotTrack) {
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="/">
-      <img src="/images/favicon.png">Ricardo G. Sousa</a>
+      
+        <img src="/images/site/favicon_hu60031865da73c331b33790c8e6d02fb7_3060_42x0_resize_box_3.png" alt="Logo">
+      Ricardo G. Sousa</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -76,12 +130,17 @@ if (!doNotTrack) {
     <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
       <ul class="navbar-nav ml-auto">
       
+      
       </ul>
     </div>
   </div>
   
-  <img src="/images/favicon.png" class="d-none" id="main-logo">
-  <img src="/images/favicon.png" class="d-none" id="inverted-logo">
+  
+    <img src="/images/site/favicon_hu60031865da73c331b33790c8e6d02fb7_3060_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/site/favicon_hu60031865da73c331b33790c8e6d02fb7_3060_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
 </nav>
 
 
@@ -91,10 +150,12 @@ if (!doNotTrack) {
   <section class="sidebar-section" id="sidebar-section">
     <div class="sidebar-holder">
       <div class="sidebar" id="sidebar">
-        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
-            <li id="list-heading"><a href="https://rjgsousa.github.io/posts" data-filter="all">Posts</a></li>
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
             <div class="subtree">
                 
   
@@ -107,7 +168,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="/patterns/">Patterns</a>
+      <i class="fas fa-minus-circle"></i><a class="active" href="">patterns</a>
       
       <ul class="active">
         
@@ -117,7 +178,7 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/posts/meetings/">Meetings</a></li>
+    <li><a class="" href="/posts/meetings/" title="Meetings">Meetings</a></li>
   
 
   
@@ -129,7 +190,7 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="active" href="/posts/remote-work/">Remote Work</a></li>
+    <li><a class="active" href="/posts/remote-work/" title="Remote Work">Remote Work</a></li>
   
 
 
@@ -152,21 +213,21 @@ if (!doNotTrack) {
   <div class="content">
     <div class="container p-0 read-area">
       
-      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://rjgsousa.github.io/images/posts/remote-work/remote-work.png);'>
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(/images/sections/posts/remote-work/remote-work.png);'>
       </div>
 
       
       <div class="page-content">
         <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/avatar.png'/>
+          <img class="rounded-circle" src='/images/author/ricardo_hueaef772b6114744b533806dc4065606d_185167_120x120_fit_box_3.png' alt="Author Image">
           <h5 class="author-name"></h5>
-          <p>October 25, 2020</p>
+          <p>Sunday, October 25, 2020</p>
         </div>
 
         <div class="title">
           <h1>Remote Work</h1>
         </div>
-
+        
         <div class="post-content" id="post-content">
           <p>Some of us have been forced by the pandemic to work in a new reality. Even though forced work from home != remote work, I would like to reinforce some practices that are in place in workplaces with distributed teams.</p>
 <p><strong>Acknowledgments:</strong> <em>This page would not be possible without the collaboration and discussions with <a href="https://github.com/NunoFilipeSantos">Nuno Santos</a>, Silvia Bessa and Ana Rebelo</em></p>
@@ -237,74 +298,112 @@ if (!doNotTrack) {
         </div>
 
         
+        <div class="row pl-3 pr-3">
         
-          <div class="btn-improve-page">
-              <a href="https://github.com/rjgsousa/edit/master/content/posts/remote-work.md">
+        <div class="col-md-6 share-buttons">
+        
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://github.com/rjgsousa/edit/main/content/posts/remote-work.md" title="Improve this page" target="_blank" rel="noopener">
+            
                 <i class="fas fa-code-branch"></i>
-                Improve This Page
+                Improve this page
               </a>
           </div>
         
+        </div>
 
-        
+
+
+      
       <hr />
-        <div class="row next-prev-navigator">
+        
 
 
-  
-    
-      
-      <div class="col-md-6 previous-article">
-        <a href="/posts/meetings/" class="btn btn-outline-info">
-          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
-          <br />
-          <span>Meetings</span>
-        </a>
-      </div>
-      
-    
-    
-  
+
+
+
+
 
   
 
+
+
+
+
+  
+  
+
+  
+    
+    
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/posts/meetings/" title="Meetings" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">Meetings</div>
+      </a>
+    </div>
+  
+  
 </div>
 
       <hr />
-      
-      
-          <div id="disqus_thread"></div>
-<script type="text/javascript">
-  (function () {
-    
-    
-    if (window.location.hostname == "localhost") return;
-
-    var dsq = document.createElement("script");
-    dsq.type = "text/javascript";
-    dsq.async = true;
-    var disqus_shortname = "does-not-exist";
-    dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
-    (
-      document.getElementsByTagName("head")[0] ||
-      document.getElementsByTagName("body")[0]
-    ).appendChild(dsq);
-  })();
-</script>
-<noscript
-  >Please enable JavaScript to view the
-  <a href="https://disqus.com/?ref_noscript"
-    >comments powered by Disqus.</a
-  ></noscript
->
-<a href="https://disqus.com/" class="dsq-brlink"
-  >comments powered by <span class="logo-disqus">Disqus</span></a
->
 
       
+      
+
+      
+      
+        
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    (function () {
+      
+      
+      if (window.location.hostname == "localhost") return;
+
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      var disqus_shortname = "does-not-exist";
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <noscript
+    >Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript"
+      >comments powered by Disqus.</a
+    ></noscript
+  >
+  <a href="https://disqus.com/" class="dsq-brlink"
+    >comments powered by <span class="logo-disqus">Disqus</span></a
+  >
+
+
+      
+
       </div>
     </div>
   </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
   
 </section>
 
@@ -368,6 +467,7 @@ if (!doNotTrack) {
     </div>
 
     
+    
 
 
 
@@ -376,107 +476,162 @@ if (!doNotTrack) {
 
 
 
-<footer class="container-fluid text-center align-content-center footer pb-2">
-  <div class="container pt-5">
-    <div class="row text-left">
-      <div class="col-md-4 col-sm-12">
-        <h5>Navigation</h5>
+
+
+  
+      
+  
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
         
-        <ul>
-            
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://rjgsousa.github.io/#about">About</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#about">About</a>
-              </li>
-            
-            
-              
-              
                 
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://rjgsousa.github.io/#recent-posts">Recent Posts</a>
+                </li>
               
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
-              </li>
             
-        </ul>
-        
-
-      </div>
-      
-      <div class="col-md-4 col-sm-12">
-        <h5>Contact me:</h5>
-        <ul>
+              
+            
+          </ul>
           
-          <li><span>Email: </span> <span>ricardo &lt;at&gt; rsousa.co</span></li>
-          
-        </ul>
-      </div>
-      
-      
-      <div class="col-md-4 col-sm-12">
+        </div>
         
-        <p>Stay up to date with email notification</p>
-        <form>
-          <div class="form-group">
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Enter email"
-            />
-            <small id="emailHelp" class="form-text text-muted"
-              >We&#39;ll never share your email with anyone else.</small
-            >
-          </div>
-          <button type="submit" class="btn btn-info">Submit</button>
-        </form>
-      </div>
-      
-    </div>
-  </div>
-  <hr />
-  <div class="container">
-    <div class="row text-left">
-      <div class="col-md-4">
-        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
-          <img src="/assets/images/inverted-logo.png">
-          Toha
-        </a>
-      </div>
-      <div class="col-md-4 text-center">© 2020 Copyright.</div>
-      <div class="col-md-4 text-right">
-        <a id="hugo" href="https://gohugo.io/">Powered by
-        <img
-          src="/assets/images/hugo-logo-wide.svg"
-          alt="Hugo Logo"
-          height="18"
-        />
-        </a>
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:ricardo%20%3cat%3e%20rsousa.co target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>ricardo &lt;at&gt; rsousa.co</span>
+                </a></li>
+              
+            
+              
+                <li><a href=https://github.com/rjgsousa target="_blank" rel="noopener">
+                  <span><i class="fab fa-github"></i></span> <span>rjgsousa</span>
+                </a></li>
+              
+            
+              
+                <li><a href=https://www.linkedin.com/in/rjgsousa target="_blank" rel="noopener">
+                  <span><i class="fab fa-linkedin"></i></span> <span>Ricardo G. Sousa</span>
+                </a></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
       </div>
     </div>
-  </div>
-</footer>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2022 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
 
-    <script src="/assets/js/jquery-3.4.1.min.js"></script>
-<script src="/assets/js/popper.min.js"></script>
-<script src="/assets/js/bootstrap.min.js"></script>
 
-<script src="/assets/js/navbar.js"></script>
-<script src="/assets/js/main.js"></script>
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
 
 
     
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-<script src="/assets/js/single.js"></script>
+<script src="/js/single.js"></script>
 <script>
   hljs.initHighlightingOnLoad();
 </script>
 
 
-  </body>
+
+
+
+
+
+
+
+    
+</body>
 </html>
