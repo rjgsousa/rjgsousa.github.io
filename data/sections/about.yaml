@@ -15,7 +15,7 @@ company:
   url: "https://www.farfetch.com"
 
 # your resume. this file path should be relative to you "static" directory
-resume: "files/CV.pdf"
+# resume: "files/CV.pdf"
 
 # a summary about you
 summary: 'I am an accomplished Principal Scientist/Research Scientist who is passionate
@@ -37,9 +37,9 @@ socialLinks:
   icon: "fab fa-github"
   url: "https://www.github.com/rjgsousa"
 
-- name: Stackoverflow
-  icon: "fab fa-stack-overflow"
-  url: "#"
+#- name: Stackoverflow
+#  icon: "fab fa-stack-overflow"
+#  url: "#"
 
 - name: LinkedIn
   icon: "fab fa-linkedin"
@@ -48,10 +48,6 @@ socialLinks:
 - name: Twitter
   icon: "fab fa-twitter"
   url: "https://twitter.com/rjgsousa"
-
-- name: Instagram
-  icon: "fab fa-instagram"
-  url: "https://instagram.com/rjgsousa"
 
 # your soft skills
 # give the percentage between 50 to 100 with 5 intervals.
