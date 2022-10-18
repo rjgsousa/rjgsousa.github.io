@@ -3,7 +3,7 @@ section:
   name: Publications
   id: publications
   enable: true
-  weight: 3
+  weight: 5
   showOnNavbar: true
 
 # filter buttons
@@ -14,6 +14,10 @@ buttons:
     filter: "machinelearning"
   - name: "Computer Vision"
     filter: "computer-vision"
+  - name: "Conversational AI"
+    filter: "conversational-ai"
+  - name: "Ordinal Learning"
+    filter: "ordinal-learning"
 
 publications:
   - title: "iFetch: Multimodal Conversational Agents for the Online Fashion Marketplace."
@@ -35,5 +39,48 @@ publications:
       - name: "Hauptmann, Alexander G."
     paper:
         url: "https://rjgsousa.github.io/files/publications/2021.MuCAI.2021.pdf"
-    categories: ["machinelearning"]
+    categories: ["machinelearning", "conversational-ai"]
     tags: ["Machine Learning", "Conversational AI"]
+
+  - title: "A Unified Model with Structured Output for Fashion Images Classification."
+    publishedIn:
+      name: "AI for Fashion Workshop, KDD 2018, London, United Kingdom"
+      date: "20 August 2018"
+      url: "http://arxiv.org/abs/1806.09445"
+    authors:
+      - name: "Ferreira, Beatriz Quintino"
+      - name: "Baía, Luís"
+      - name: "Faria, João"
+      - name: "Sousa, Ricardo Gamelas"
+    paper:
+        url: "https://rjgsousa.github.io/files/publications/2018.BeatrizQuintino.KDD2018.pdf"
+    categories: ["computer-vision"]
+    tags: ["Computer Vision", "Image Search", "Online Shopping"]
+
+  - title: "Measuring the Performance of Ordinal Classification"
+    publishedIn:
+      name: "Int. J. Pattern Recognit. Artif. Intell."
+      date: "2011"
+      url: "https://doi.org/10.1142/S0218001411009093"
+    authors:
+      - name: "Cardoso, Jaime S."
+      - name: "Sousa, Ricardo Gamelas"
+    paper:
+        url: "https://rjgsousa.github.io/files/publications/2011.JaimeCardoso.IJPRAI2011.pdf"
+    categories: ["ordinal-learning"]
+    tags: ["Machine Learning", "Ordinal Learning", "Metrics"]
+
+  - title: "An Ordinal Data Method for the Classification with Reject Option"
+    publishedIn:
+      name: "International Conference on Machine Learning and Applications, ICMLA 2009, Miami Beach, Florida, USA"
+      date: "December 13, 2009"
+      url: "https://doi.org/10.1109/ICMLA.2009.11"
+    authors:
+      - name: "Sousa, Ricardo Gamelas"
+      - name: "Mora, Beatriz"
+      - name: "Cardoso, Jaime S."
+    paper:
+        url: "https://rjgsousa.github.io/files/publications/2009.RSousa.ICMLA2009.pdf"
+    categories: ["ordinal-learning"]
+    tags: ["Machine Learning", "Ordinal Learning", "Metrics"]
+
