@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Articles on Ricardo G. Sousa</title>
-    <link>https://rjgsousa.github.io/posts/</link>
-    <description>Recent content in Articles on Ricardo G. Sousa</description>
+    <title>Rule of Engagement on Ricardo G. Sousa</title>
+    <link>https://rjgsousa.github.io/posts/ways-of-working/</link>
+    <description>Recent content in Rule of Engagement on Ricardo G. Sousa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Nov 2020 06:00:23 +0600</lastBuildDate><atom:link href="https://rjgsousa.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Sun, 22 Nov 2020 06:00:23 +0600</lastBuildDate><atom:link href="https://rjgsousa.github.io/posts/ways-of-working/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>Meetings: An Introduction</title>
       <link>https://rjgsousa.github.io/posts/ways-of-working/meetings/introduction/</link>
       <pubDate>Sun, 22 Nov 2020 06:00:23 +0600</pubDate>
@@ -28,19 +28,6 @@ Acknowledgments: This page would not be possible without the collaboration and d
 Setup Chat Slack, Microsoft Teams, Discord
 Slack/Microsoft Teams are currently the go-to apps for teams communications.</description>
     </item>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
   </channel>
