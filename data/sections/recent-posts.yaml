@@ -3,7 +3,7 @@ section:
   name: Recent Posts
   id: recent-posts
   enable: true
-  weight: 4
+  weight: 3
   showOnNavbar: true
   # Can optionally hide the title in sections
   # hideTitle: true

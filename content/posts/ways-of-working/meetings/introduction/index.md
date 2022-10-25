@@ -1,14 +1,14 @@
 ---
-title: "Meetings"
+title: "Meetings: An Introduction"
 date: 2020-11-22T06:00:23+06:00
 hero: /images/sections/posts/meetings/meeting.jpg
 description: Tips for remote work and distributed teams
 menu:
   sidebar:
-    name: Meetings
+    name: Introduction
     identifier: how-to-run-meetings
-    parent: patterns
-    weight: 500
+    parent: meetings
+    weight: 10
 ---
 
 
