@@ -1,0 +1,46 @@
+# section information
+section:
+  name: Projects
+  id: projects
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: All
+  filter: "all"
+- name: Professional
+  filter: "professional"
+- name: Academic
+  filter: "academic"
+- name: Hobby
+  filter: "hobby"
+
+# your projects
+projects:
+- name: iFetch
+  logo: /images/sections/projects/iFetch.png
+  role: Project Coordinator and Principal Investigator
+  timeline: "April 2020 - April 2023"
+  url: "https://ifetch-chatbot.github.io"
+  summary: Multimodal Conversational Agents for the Online Fashion Marketplace.
+  tags: ["professional", "conversational-ai"]
+
+- name: ANI LaTeX Template
+  logo: /images/sections/projects/LaTeX.png
+  role: Owner
+  timeline: "November 2022"
+  repo: https://github.com/iFetch-chatbot/ani-report-latex-cls
+  summary: ANI LaTeX Template CLS.
+  tags: ["professional", "LaTeX"]
+
+- name: Reject Option with Ordinal Learning Algorithms
+  logo:
+  role: Owner
+  timeline: "2008-2012"
+  repo: https://github.com/rjgsousa/RejectOption
+  summary: Code for the paper "An Ordinal Data Method for the Classification with Reject Option".
+  tags: ["academic", "reject-option"]
