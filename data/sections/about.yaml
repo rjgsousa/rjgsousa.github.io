@@ -37,31 +37,30 @@ socialLinks:
   icon: "fab fa-github"
   url: "https://www.github.com/rjgsousa"
 
-#- name: Stackoverflow
-#  icon: "fab fa-stack-overflow"
-#  url: "#"
-
 - name: LinkedIn
   icon: "fab fa-linkedin"
   url: "https://www.linkedin.com/in/rjgsousa"
 
-- name: Twitter
-  icon: "fab fa-twitter"
-  url: "https://twitter.com/rjgsousa"
+- name: Mastodon
+  icon: "fab fa-mastodon"
+  url: "https://masto.ai/@rjgsousa"
 
 # your soft skills
 # give the percentage between 50 to 100 with 5 intervals.
 # currently supported colors: blue, yellow, pink, green, sky, orange
 softSkills:
-- name: Reading
-  percentage: 85
-  color: yellow
-- name: Travelling
-  percentage: 95
-  color: pink
-- name: Photography
-  percentage: 80
-  color: green
 - name: Learning
   percentage: 90
   color: sky
+- name: Reading
+  percentage: 85
+  color: yellow
+- name: Travelling & Knowing new Cultures
+  percentage: 95
+  color: orange
+- name: Photography
+  percentage: 80
+  color: green
+- name: Family Quality Time
+  percentage: 95
+  color: nightsky
