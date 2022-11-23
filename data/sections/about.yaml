@@ -49,7 +49,7 @@ socialLinks:
 # give the percentage between 50 to 100 with 5 intervals.
 # currently supported colors: blue, yellow, pink, green, sky, orange
 softSkills:
-- name: Learning
+- name: Continuous Learning
   percentage: 90
   color: sky
 - name: Reading
