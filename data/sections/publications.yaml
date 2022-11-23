@@ -18,8 +18,40 @@ buttons:
     filter: "conversational-ai"
   - name: "Ordinal Learning"
     filter: "ordinal-learning"
+  - name: "Competitions"
+    filter: "competitions"
 
 publications:
+  - title: "Fill in the Blank for Fashion Complementary Outfit Product Retrieval: VISUM Summer School Competition"
+    publishedIn:
+      name: "Machine Vision and Applications"
+      date: "2022"
+      url: ""
+    authors:
+      - name: "Rebelo, Ana"
+      - name: "Afonso, Carolina"
+      - name: "Cimarelli, Claudio"
+      - name: "Castro, Eduardo"
+      - name: "Moreira, Gabriel"
+      - name: "Yang, Hsiu-yu"
+      - name: "Hrga, Ingrid"
+      - name: "Rio-Torto, Isabel"
+      - name: "Ahmad, Javed"
+      - name: "Capozzi, Leonardo"
+      - name: "Ferreira, Mafalda Falcão"
+      - name: "Keswani, Monish"
+      - name: "Daoudi, Nadia"
+      - name: "Ferreira, Pedro M."
+      - name: "Sousa, Ricardo Gamelas"
+      - name: "Beco, Sofia"
+      - name: "Gonçalves, Tiago"
+      - name: "Albuquerque, Tomé"
+      - name: "Silva, Wilson"
+    paper:
+        url: ""
+    categories: ["computer-vision", "competitions"]
+    tags: ["Computer Vision", "Competition"]
+
   - title: "iFetch: Multimodal Conversational Agents for the Online Fashion Marketplace."
     publishedIn:
       name: "MuCAI'21: Proceedings of the 2nd ACM Multimedia Workshop on Multimodal Conversational AI, Virtual Event, China"
