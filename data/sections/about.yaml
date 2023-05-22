@@ -49,12 +49,9 @@ softSkills:
 - name: Reading
   percentage: 85
   color: yellow
-- name: Travelling & Knowing new Cultures
+- name: Travelling & Learning new Cultures
   percentage: 95
   color: orange
 - name: Photography
   percentage: 80
   color: green
-- name: Family Quality Time
-  percentage: 95
-  color: nightsky
