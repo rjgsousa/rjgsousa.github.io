@@ -25,7 +25,7 @@ summary: 'I am an accomplished Principal Scientist/Research Scientist who is pas
 socialLinks:
 - name: Email
   icon: "fas fa-envelope"
-  url: "ricardo <at> rsousa.co"
+  url: "ricardo <at> rsousa <dot> co"
 
 - name: Github
   icon: "fab fa-github"
@@ -39,19 +39,3 @@ socialLinks:
   icon: "fab fa-mastodon"
   url: "https://masto.ai/@rjgsousa"
 
-# your soft skills
-# give the percentage between 50 to 100 with 5 intervals.
-# currently supported colors: blue, yellow, pink, green, sky, orange
-softSkills:
-- name: Continuous Learning
-  percentage: 90
-  color: sky
-- name: Reading
-  percentage: 85
-  color: yellow
-- name: Travelling & Learning new Cultures
-  percentage: 95
-  color: orange
-- name: Photography
-  percentage: 80
-  color: green
