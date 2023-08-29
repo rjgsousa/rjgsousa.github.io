@@ -21,11 +21,11 @@ buttons:
 
 # your projects
 projects:
-- name: iFetch
+- name: Farfetch Chat R&D (formerly known as iFetch)
   logo: /images/sections/projects/iFetch.png
   role: Project Coordinator and Principal Investigator
   timeline: "April 2020 - April 2023"
-  url: "https://ifetch-chatbot.github.io"
+  url: "https://farfetch-chat-rd.github.io/"
   summary: Multimodal Conversational Agents for the Online Fashion Marketplace.
   tags: ["professional", "conversational-ai"]
 
