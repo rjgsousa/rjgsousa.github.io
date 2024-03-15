@@ -22,6 +22,22 @@ buttons:
     filter: "competitions"
 
 publications:
+  - title: "Task Conditioned BERT for Joint Intent Detection and Slot-filling"
+    publishedIn:
+      name: "EPIA Conference on Artificial Intelligence"
+      date: "2023"
+      url: ""
+    authors:
+      - name: "Tavares, Diogo"
+      - name: "Azevedo, Pedro"
+      - name: "Semedo, David"
+      - name: "Sousa, Ricardo"
+      - name: "Magalhaes, Joao"
+    paper:
+        url: ""
+    categories: ["paper", "nlp"]
+    tags: ["nlp", "conversaional ai"]
+
   - title: "Fill in the Blank for Fashion Complementary Outfit Product Retrieval: VISUM Summer School Competition"
     publishedIn:
       name: "Machine Vision and Applications"

@@ -7,16 +7,6 @@ section:
   showOnNavbar: true
   template: sections/about.html
 
-# your designation
-designation: Head of AI 
-# your company information
-company:
-  name: Visor
-  url: "https://www.visor.ai"
-
-# your resume. this file path should be relative to you "static" directory
-# resume: "files/CV.pdf"
-
 # a summary about you
 summary: '
 Dynamic and results-oriented AI leader with over a decade of experience driving the development and
