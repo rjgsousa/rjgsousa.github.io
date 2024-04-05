@@ -21,6 +21,14 @@ buttons:
 
 # your projects
 projects:
+- name: Video Short (& Blog) Generator
+  logo: /images/sections/projects/vsg.png
+  role: Owner
+  timeline: "March 2024 - April 2024"
+  repo: https://github.com/rjgsousa/video-shorts-generator
+  summary: The Video Shorts Generator (VSG) streamlines video and blog content creation for brands.
+  tags: ["hobby", "ai", "llm"]
+
 - name: Farfetch Chat R&D (formerly known as iFetch)
   logo: /images/sections/projects/iFetch.png
   role: Project Coordinator and Principal Investigator
