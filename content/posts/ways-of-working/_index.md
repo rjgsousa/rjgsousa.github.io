@@ -1,8 +1,8 @@
 ---
-title: Rule of Engagement
+title: "Rules of Engagement"
 menu:
   sidebar:
-    name: Rule of Engagement
+    name: Rules of Engagement
     identifier: rules-of-engagement
     weight: 10
 ---
