@@ -21,6 +21,14 @@ buttons:
 
 # your projects
 projects:
+- name: Face Liveness and Age Detections
+  logo:
+  role: Owner
+  timeline: "March 2024 - April 2024"
+  repo: https://github.com/rjgsousa/face-liveness-age-detector
+  summary: Face liveness and age detection system, providing tools and models to identify real faces and estimate age from videos and images.
+  tags: ["hobby", "ai", "image processing", "computer vision", "face detection"]
+
 - name: Video Short (& Blog) Generator
   logo: /images/sections/projects/vsg.png
   role: Owner
