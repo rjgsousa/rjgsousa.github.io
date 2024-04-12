@@ -6,7 +6,17 @@
     <description>Recent content in Articles on Ricardo G. Sousa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Nov 2022 23:00:23 +0600</lastBuildDate><atom:link href="https://rjgsousa.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Fri, 12 Apr 2024 06:00:23 +0600</lastBuildDate><atom:link href="https://rjgsousa.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Conversational Commerce: An Introduction</title>
+      <link>https://rjgsousa.github.io/posts/professional/farfetch/conversational-commerce/introduction/</link>
+      <pubDate>Fri, 12 Apr 2024 06:00:23 +0600</pubDate>
+      
+      <guid>https://rjgsousa.github.io/posts/professional/farfetch/conversational-commerce/introduction/</guid>
+      <description>In April 2020 I have started working on a new project to revolutionize how customers shop. For that purpose, we have written a blog post introducing Farfetch Chat (previously known as iFETCH), a conversational AI technology with multimodal capabilities developed by FARFETCH in collaboration with Carnegie Mellon University (CMU), Instituto Superior Técnico (IST), and Universidade Nova de Lisboa (NOVA).
+Farfetch Chat aimed to revolutionize the online high-fashion sector by providing a &amp;ldquo;physical store&amp;rdquo;-like experience through natural interaction using both textual and visual data.</description>
+    </item>
+    
+    <item>
       <title>Core Competencies: An Introduction</title>
       <link>https://rjgsousa.github.io/posts/competencies/core-competencies/</link>
       <pubDate>Wed, 23 Nov 2022 23:00:23 +0600</pubDate>
