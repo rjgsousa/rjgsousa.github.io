@@ -2,7 +2,7 @@
 name: "Ricardo G. Sousa"
 nickname: "Ricardo"
 # greeting message before your name. it will default to "Hi! I am" if not provided
-greeting: "Hi, I am"
+greeting: "Hi, I am "
 image: "images/author/ricardo.png"
 # give your some contact information. they will be used in the footer
 contactInfo:
@@ -12,8 +12,8 @@ contactInfo:
 
 # some summary about what you do
 summary:
-  - I am a People Manager
-  - I am a Developer/AI Engineer
-  - I am a Scientist
-  - I love to code
-  - I am a ML nerd
+  - Empowering businesses to harness the power of AI and data-driven solutions
+  - Developing tailored AI strategies and platforms
+  - Implementing cutting-edge machine learning and computer vision technologies to enhance products and services
+  - Enabling AI platforms that unlock full value of data
+  - Providing expert guidance and strategic partnership to bridge the gap between technical teams and stakeholders

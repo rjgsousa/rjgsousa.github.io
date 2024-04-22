@@ -14,10 +14,12 @@ buttons:
   filter: "all"
 - name: Professional
   filter: "professional"
-- name: Academic
-  filter: "academic"
-- name: Hobby
-  filter: "hobby"
+- name: Conversational AI
+  filter: "conversational ai"
+- name: Computer Vision
+  filter: "computer vision"
+- name: LLM
+  filter: "LLM"
 
 # your projects
 projects:
@@ -27,7 +29,7 @@ projects:
   timeline: "March 2024 - April 2024"
   repo: https://github.com/rjgsousa/face-liveness-age-detector
   summary: Face liveness and age detection system, providing tools and models to identify real faces and estimate age from videos and images.
-  tags: ["hobby", "ai", "image processing", "computer vision", "face detection"]
+  tags: ["ai", "image processing", "computer vision", "face detection", "professional"]
 
 - name: Video Short (& Blog) Generator
   logo: /images/sections/projects/vsg.png
@@ -35,7 +37,7 @@ projects:
   timeline: "March 2024 - April 2024"
   repo: https://github.com/rjgsousa/video-shorts-generator
   summary: The Video Shorts Generator (VSG) streamlines video and blog content creation for brands.
-  tags: ["hobby", "ai", "llm"]
+  tags: ["ai", "llm", "professional"]
 
 - name: Farfetch Chat R&D (formerly known as iFetch)
   logo: /images/sections/projects/iFetch.png
@@ -43,7 +45,7 @@ projects:
   timeline: "April 2020 - April 2023"
   url: "https://farfetch-chat-rd.github.io/"
   summary: Multimodal Conversational Agents for the Online Fashion Marketplace.
-  tags: ["professional", "conversational-ai"]
+  tags: ["professional", "conversational ai"]
 
 - name: ANI LaTeX Template
   logo: /images/sections/projects/LaTeX.png
@@ -59,4 +61,4 @@ projects:
   timeline: "2008-2012"
   repo: https://github.com/rjgsousa/RejectOption
   summary: Code for the paper "An Ordinal Data Method for the Classification with Reject Option".
-  tags: ["academic", "reject-option"]
+  tags: ["reject-option"]
