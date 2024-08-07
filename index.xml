@@ -6,7 +6,16 @@
     <description>Recent content on Ricardo G. Sousa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 12 Apr 2024 06:00:23 +0600</lastBuildDate><atom:link href="https://rjgsousa.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Wed, 07 Aug 2024 14:00:00 +0100</lastBuildDate><atom:link href="https://rjgsousa.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Automated Book Summarization</title>
+      <link>https://rjgsousa.github.io/posts/machine-learning/summarization/the-potential-of-automated-book-summarization/</link>
+      <pubDate>Wed, 07 Aug 2024 14:00:00 +0100</pubDate>
+      
+      <guid>https://rjgsousa.github.io/posts/machine-learning/summarization/the-potential-of-automated-book-summarization/</guid>
+      <description>In an era of information abundance, the ability to efficiently extract key insights from vast amounts of text has become an invaluable skill. This is particularly true for books, where complex narratives and intricate arguments can make it challenging to grasp the essence of a work. Consequently, automated book summarization techniques, which employ AI (more recently leveraging the power of Large Language Models (LLMs)) to distill lengthy texts into concise, informative summaries, have emerged as an increasingly reliable resource.</description>
+    </item>
+    
+    <item>
       <title>Conversational Commerce: An Introduction</title>
       <link>https://rjgsousa.github.io/posts/professional/farfetch/conversational-commerce/introduction/</link>
       <pubDate>Fri, 12 Apr 2024 06:00:23 +0600</pubDate>
