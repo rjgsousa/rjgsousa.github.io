@@ -20,9 +20,19 @@ buttons:
   filter: "computer vision"
 - name: LLM
   filter: "LLM"
+- name: Natural Language Processing
+  filter: "NLP"
 
 # your projects
 projects:
+- name: Book Summarization
+  logo:
+  role: Owner
+  timeline: "August 2024"
+  repo: https://github.com/rjgsousa/BookSummarizer
+  summary: "Book summarization: Exploring RAG and Literacy reviews to generate informative summaries"
+  tags: ["ai", "professional"]
+
 - name: Face Liveness and Age Detections
   logo:
   role: Owner
