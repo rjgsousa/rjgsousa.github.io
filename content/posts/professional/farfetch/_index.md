@@ -1,8 +1,8 @@
 ---
-title: "Professional Blogs - Farfetch" 
+title: "Farfetch" 
 menu:
   sidebar:
-    name: Professional Blogs @ Farfetch
+    name: Farfetch
     identifier: professional-blogs-farfetch
     parent: professional-blogs
     weight: 20

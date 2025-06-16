@@ -1,8 +1,9 @@
 ---
-title: Core Competencies
+title: "Core Competencies"
 menu:
   sidebar:
     name: Core Competencies
     identifier: core-competencies
-    weight: 100
+    parent: management-blogs
+    weight: 20
 ---
