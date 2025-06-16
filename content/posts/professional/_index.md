@@ -6,4 +6,3 @@ menu:
     identifier: professional-blogs
     weight: 20
 ---
-
