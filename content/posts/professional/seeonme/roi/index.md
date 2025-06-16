@@ -1,6 +1,6 @@
 ---
 title: "Transform Your Bottom Line: Why Virtual Try-On Technology Is No Longer Optional"
-date: 2025-06-16T16:00:00+00:00
+date: 2025-06-16T15:00:00+00:00
 hero: /images/sections/posts/vton/FashionStudioScene.jpeg
 description: An introduction
 menu:
