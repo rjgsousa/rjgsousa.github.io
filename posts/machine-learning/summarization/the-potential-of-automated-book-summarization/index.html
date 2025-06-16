@@ -1,26 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Automated Book Summarization</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-
-<link rel="stylesheet" href="/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="/css/layouts/main.css"/>
-<link rel="stylesheet" href="/css/navigators/navbar.css"/>
-<link rel="stylesheet" href="/css/plyr.css"/>
-
-<link rel="stylesheet" href="/css/flag-icon.min.css"/>
-
-
-<link rel="stylesheet" href="/google-fonts/Mulish/mulish.css"/>
-
-
-<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
-
-
+<link rel="stylesheet" href="/application.2fc4cfe7d8e612ccc7ee98a8da8d6b5485d943580b9dd3d034d648b7c254977a.css" integrity="sha256-L8TP59jmEszH7pio2o1rVIXZQ1gLndPQNNZIt8JUl3o=" />
 
 
 
@@ -35,53 +21,77 @@
   
   
 
-  <link rel="icon" type="image/png" href="/images/site/favicon_hu3d9d3e1d12a5bcba2cb6403ce3075488_3189_42x0_resize_box_3.png" />
-
-<meta property="og:title" content="Automated Book Summarization" />
-<meta property="og:description" content="An Introduction" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rjgsousa.github.io/posts/machine-learning/summarization/the-potential-of-automated-book-summarization/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-08-07T14:00:00+01:00" />
-<meta property="article:modified_time" content="2024-08-07T14:00:00+01:00" />
+  <link rel="icon" type="image/png" href="/images/site/favicon_hu_3eb644c248bc1944.png" />
 
 
-    
+
+
+
+
+
+
+
+
+<meta property="og:title" content="Ricardo G. Sousa"/>
+<meta property="og:type" content="website"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="/">
+<meta property="og:url" content="https://rjgsousa.github.io/">
+
     
 <meta name="description" content="An Introduction" />
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
-/>
-<link rel="stylesheet" href="/css/layouts/single.css"/>
-<link rel="stylesheet" href="/css/navigators/sidebar.css">
-
-<link rel="stylesheet" href="/css/style.css"/>
 
 
 
     
 
-
-
-
     
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-10658529-1', 'auto');
-	
-	ga('send', 'pageview');
+        
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+
+            
+            
+            <script defer src='https://analytics.eu.umami.is/script.js' data-website-id="5eea7f3f-34e6-4e69-b7cf-97ceda354beb"></script>
+            
+            
+
+            
+        
+    
+
+
+
+
+
+    <script integrity="sha256-DO4ugzEwhTW1Id1UIWn0gUJWaebCYOypeTit6LW4QB4=">
+     let theme = localStorage.getItem('theme-scheme') || localStorage.getItem('darkmode:color-scheme') || 'light'
+if (theme === 'system') {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    theme = 'dark'
+  } else {
+    theme = 'light'
+  }
 }
-</script>
+document.documentElement.setAttribute('data-theme', theme)
 
-</head>
+    </script>
+    
+  </head>
 
-  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
-    <div class="container-fluid bg-dimmed wrapper">
+  <body class="type-posts kind-page" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="80">
+    <div class="container-fluid bg-secondary wrapper">
       
       
     
@@ -90,10 +100,24 @@ if (!doNotTrack) {
 
 
 
+
+
+
+  
+
+
+
+
+
+
+
+
+
   
 
 
   
+
 
 
 
@@ -113,32 +137,106 @@ if (!doNotTrack) {
   
 
 
-<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar shadow " id="top-navbar">
   <div class="container">
-      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
-      <span class="navbar-toggler-icon"></span>
+    
+    <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
+      <i data-feather="sidebar"></i>
     </button>
+    
     <a class="navbar-brand" href="/">
       
-        <img src="/images/site/favicon_hu3d9d3e1d12a5bcba2cb6403ce3075488_3189_42x0_resize_box_3.png" alt="Logo">
+        <img src="/images/site/favicon_hu_3eb644c248bc1944.png" id="logo" alt="Logo">
       Ricardo G. Sousa</a>
-    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
-      <span class="navbar-toggler-icon"></span>
+    <button
+      class="navbar-toggler navbar-light"
+      id="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#top-nav-items"
+      aria-label="menu"
+    >
+      <i data-feather="menu"></i>
     </button>
 
-    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
-      <ul class="navbar-nav ml-auto">
-      
-      
+    <div class="collapse navbar-collapse dynamic-navbar" id="top-nav-items">
+      <ul class="nav navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/#home">Home</a>
+        </li>
+        
+          
+          
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#about">About</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#projects">Projects</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#recent-posts">Recent Posts</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#publications">Publications</a>
+                </li>
+              
+            
+          
+        
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" id="blog-link" href="/posts">Posts</a>
+          </li>
+        
+        
+        
+        
+        
       </ul>
     </div>
   </div>
   
   
-    <img src="/images/site/favicon_hu3d9d3e1d12a5bcba2cb6403ce3075488_3189_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+    <img src="/images/site/favicon_hu_3eb644c248bc1944.png" class="d-none" id="main-logo" alt="Logo">
   
   
-    <img src="/images/site/favicon_hu3d9d3e1d12a5bcba2cb6403ce3075488_3189_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+    <img src="/images/site/favicon_hu_3eb644c248bc1944.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
   
 </nav>
 
@@ -154,7 +252,7 @@ if (!doNotTrack) {
         </form>
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
-            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <li id="list-heading"><a href="/posts/" data-filter="all">Posts</a></li>
             <div class="subtree">
                 
   
@@ -164,7 +262,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/ways-of-working/">Rules of Engagement</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/management/"> About management</a>
       
       <ul class="">
         
@@ -175,7 +273,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/ways-of-working/meetings/">Meetings</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/management/ways-of-working/"> Rules of Engagement</a>
       
       <ul class="">
         
@@ -185,7 +283,18 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/posts/ways-of-working/meetings/introduction/" title="Introduction">Introduction</a></li>
+    <li>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/management/ways-of-working/meetings/"> Meetings</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/management/ways-of-working/meetings/introduction/" title="Introduction">Introduction</a></li>
   
 
 
@@ -200,7 +309,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/ways-of-working/remote-work/">Remote Work</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/management/ways-of-working/remote-work/"> Remote Work</a>
       
       <ul class="">
         
@@ -210,7 +319,37 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/posts/ways-of-working/remote-work/introduction/" title="Introduction">Introduction</a></li>
+    <li><a class=" list-link" href="/posts/management/ways-of-working/remote-work/introduction/" title="Introduction">Introduction</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/management/competencies/"> Core Competencies</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/management/competencies/core-competencies/" title="Introduction">Introduction</a></li>
   
 
 
@@ -233,7 +372,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/machine-learning/">Machine Learning</a>
+      <i data-feather="minus-circle"></i><a class="active list-link" href="/posts/machine-learning/"> Machine Learning</a>
       
       <ul class="active">
         
@@ -247,7 +386,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/machine-learning/summarization/">About Summarization</a>
+      <i data-feather="minus-circle"></i><a class="active list-link" href="/posts/machine-learning/summarization/"> About Summarization</a>
       
       <ul class="active">
         
@@ -260,7 +399,7 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="active" href="/posts/machine-learning/summarization/the-potential-of-automated-book-summarization/" title="Introduction">Introduction</a></li>
+    <li><a class="active list-link" href="/posts/machine-learning/summarization/the-potential-of-automated-book-summarization/" title="Introduction">Introduction</a></li>
   
 
 
@@ -280,7 +419,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/professional/">Professional Blogs</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/professional/"> Professional Blogs</a>
       
       <ul class="">
         
@@ -291,7 +430,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/professional/farfetch/">Professional Blogs @ Farfetch</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/professional/farfetch/"> Farfetch</a>
       
       <ul class="">
         
@@ -302,7 +441,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/professional/farfetch/conversational-commerce/">Conversational Commerce - Professional Blogs from Farfetch</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/professional/farfetch/conversational-commerce/"> Conversational Commerce - Professional Blogs from Farfetch</a>
       
       <ul class="">
         
@@ -312,7 +451,7 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/posts/professional/farfetch/conversational-commerce/introduction/" title="Introduction">Introduction</a></li>
+    <li><a class=" list-link" href="/posts/professional/farfetch/conversational-commerce/introduction/" title="Introduction">Introduction</a></li>
   
 
 
@@ -323,31 +462,6 @@ if (!doNotTrack) {
 
       </ul>
     </li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/competencies/">Core Competencies</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/competencies/core-competencies/" title="Introduction">Introduction</a></li>
   
 
 
@@ -375,15 +489,20 @@ if (!doNotTrack) {
 
       
       <div class="page-content">
-        <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/author/ricardo_hu3c29fa528b1bcf6fc6e2f9d4753cfd22_2037750_120x120_fit_box_3.png' alt="Author Image">
+        
+        <div class="author-profile ms-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/ricardo_hu_b9f320c8061391f0.png' alt="Author Image">
           <h5 class="author-name"></h5>
-          <p>Wednesday, August 7, 2024</p>
+          <p class="text-muted">Wednesday, August 7, 2024</p>
         </div>
+        
 
         <div class="title">
           <h1>Automated Book Summarization</h1>
         </div>
+
+        
+
         
         <div class="post-content" id="post-content">
           <p>In an era of information abundance, the ability to efficiently extract key insights from vast amounts of text has become an invaluable skill. This is particularly true for books, where complex narratives and intricate arguments can make it challenging to grasp the essence of a work. Consequently, automated book summarization techniques, which employ AI (more recently leveraging the power of Large Language Models (LLMs)) to distill lengthy texts into concise, informative summaries, have emerged as an increasingly reliable resource.</p>
@@ -404,22 +523,19 @@ if (!doNotTrack) {
 <p>To enable the RAG capabilities, I used the Booksum dataset. I also included some literary analysis articles. These articles provide valuable insights and contextual information that can enhance the quality and depth of the generated book summaries.</p>
 <h2 id="early-results">Early Results</h2>
 <p>Preliminary experiments using this approach have yielded interesting results. When tasked with summarizing chapters from James Fenimore Cooper&rsquo;s &ldquo;The Last of the Mohicans,&rdquo; the AI-generated summaries demonstrated a reasonable ability to identify and present key plot points.</p>
-<p>Quantitative metrics, such as <a href="https://en.wikipedia.org/wiki/ROUGE_(metric)">ROUGE</a> indicated a high degree of similarity between baseline and the RAG-enabled with literacy documents. However, these metrics don&rsquo;t capture the full picture. Qualitative analysis, involving a closer examination of the content and flow of the summaries, highlighted other aspects in the AI&rsquo;s output. Consider the following example for the baseline:</p>
+<p>Quantitative metrics, such as <a href="https://en.wikipedia.org/wiki/ROUGE_%28metric%29" target="_blank" rel="noopener">ROUGE</a> indicated a high degree of similarity between baseline and the RAG-enabled with literacy documents. However, these metrics don&rsquo;t capture the full picture. Qualitative analysis, involving a closer examination of the content and flow of the summaries, highlighted other aspects in the AI&rsquo;s output. Consider the following example for the baseline:</p>
 <blockquote>
 <p>In a serene forest setting, two men, Chingachgook, a Native American, and Hawkeye, a white man, engage in a conversation. They discuss their ancestors, traditions, and the history of their people. Chingachgook shares the story of how his tribe, the Mohicans, arrived in the area and fought against other tribes. Hawkeye listens intently and responds with his own perspective, highlighting the differences between their cultures.
 Their conversation is interrupted by the arrival of Uncas, Chingachgook&rsquo;s son, who reports that he has been tracking a group of Maquas, a rival tribe. Hawkeye and Chingachgook decide to hunt for food, and Uncas successfully kills a deer using his bow and arrow. As they prepare to eat, they hear the sound of approaching horses and realize that a group of white men is approaching.
-The scene is set in a forest near a river, with a serene atmosphere, but also with an undercurrent of tension and potential danger. The conversation between Chingachgook and Hawkeye highlights the complexities of their relationship and the cultural differences between their people. The arrival of Uncas and the subsequent hunting scene showcases the skills and traditions of the Native American characters.</p>
-</blockquote>
+The scene is set in a forest near a river, with a serene atmosphere, but also with an undercurrent of tension and potential danger. The conversation between Chingachgook and Hawkeye highlights the complexities of their relationship and the cultural differences between their people. The arrival of Uncas and the subsequent hunting scene showcases the skills and traditions of the Native American characters.</p></blockquote>
 <p>Now, consider the output from the RAG-enabled approach:</p>
 <blockquote>
 <p>The scene shifts to a forest where two men, a Native American named Chingachgook and a white man named Hawkeye, are conversing. Chingachgook is a member of the Mohican tribe, and Hawkeye is a hunter and scout. They discuss their respective cultures and traditions, with Chingachgook sharing the story of his people&rsquo;s migration to the area and their conflicts with other tribes. Hawkeye listens intently and responds with his own perspective, acknowledging the differences between their cultures.
 As they talk, a young warrior named Uncas, Chingachgook&rsquo;s son, appears and joins the conversation. Hawkeye and Uncas engage in a discussion about hunting and the skills required to track and kill game. Hawkeye is impressed by Uncas&rsquo;s abilities and acknowledges that the Native Americans have a deeper understanding of the natural world.
-The conversation is interrupted by the sound of approaching horses, and Chingachgook identifies the riders as white men. Hawkeye takes charge and prepares to communicate with the newcomers, speaking in English and boasting of his ability to communicate with people of different cultures. The scene ends with the arrival of the white men, who are likely to be the main characters of the story.</p>
-</blockquote>
+The conversation is interrupted by the sound of approaching horses, and Chingachgook identifies the riders as white men. Hawkeye takes charge and prepares to communicate with the newcomers, speaking in English and boasting of his ability to communicate with people of different cultures. The scene ends with the arrival of the white men, who are likely to be the main characters of the story.</p></blockquote>
 <p>and, finally, from the human annotation:</p>
 <blockquote>
-<p>The narrator shifts the focus of attention from Magua and his party to another group of people in another part of the forest, a few miles west by the river. We meet the remaining primary characters: Hawkeye, a white hunter, and Chingachgook, his Mohican ally. Though both men are hunters, they dress differently. Hawkeye wears a hunting shirt, a skin cap, and buckskin leggings; he carries a knife, a pouch, and a horn. Chingachgook is almost naked and covered in war-paint. Both men carry weapons. Hawkeye carries a long rifle, and Chingachgook carries a short rifle and a tomahawk. They discuss the historical developments that have caused them to both inhabit the same forest. Hawkeye proclaims his inheritance of a genuine and enduring whiteness, and Chingachgook laments the demise of his tribe of Mohicans. Of the Mohican tribe, only Chingachgook and his son remain. At this mention of the diminishing tribe, Chingachgook&rsquo;s son Uncas appears and reports that he has been trailing the Maquas, the Iroquois enemies of the Mohicans. When the antlers of a deer appear in the distance, Hawkeye wants to shoot the animal, but then realizes that the noise of the rifle will draw the attention of the enemy. In the place of the long rifle, Uncas uses an arrow to kill the deer. Shortly thereafter, Chingachgook detects the sound of horses approaching</p>
-</blockquote>
+<p>The narrator shifts the focus of attention from Magua and his party to another group of people in another part of the forest, a few miles west by the river. We meet the remaining primary characters: Hawkeye, a white hunter, and Chingachgook, his Mohican ally. Though both men are hunters, they dress differently. Hawkeye wears a hunting shirt, a skin cap, and buckskin leggings; he carries a knife, a pouch, and a horn. Chingachgook is almost naked and covered in war-paint. Both men carry weapons. Hawkeye carries a long rifle, and Chingachgook carries a short rifle and a tomahawk. They discuss the historical developments that have caused them to both inhabit the same forest. Hawkeye proclaims his inheritance of a genuine and enduring whiteness, and Chingachgook laments the demise of his tribe of Mohicans. Of the Mohican tribe, only Chingachgook and his son remain. At this mention of the diminishing tribe, Chingachgook&rsquo;s son Uncas appears and reports that he has been trailing the Maquas, the Iroquois enemies of the Mohicans. When the antlers of a deer appear in the distance, Hawkeye wants to shoot the animal, but then realizes that the noise of the rifle will draw the attention of the enemy. In the place of the long rifle, Uncas uses an arrow to kill the deer. Shortly thereafter, Chingachgook detects the sound of horses approaching</p></blockquote>
 <p>Look closely to the subtle distinctions in this concise example (similar patterns can be seen in several other cases): <em><strong>The arrival of Uncas and the subsequent hunting scene showcases the skills and traditions of the Native American characters.</strong></em> with <em><strong>Hawkeye and Uncas engage in a discussion about hunting and the skills required to track and kill game.</strong></em>
 What&rsquo;s striking is how the two summaries share similarities yet diverge in their emphasis on the sequence of events.</p>
 <h2 id="what-is-ahead-of-us">What is ahead of us?</h2>
@@ -430,15 +546,15 @@ What&rsquo;s striking is how the two summaries share similarities yet diverge in
 </ol>
 <p>However, a more thorough quantitative analysis is necessary to further validate these findings and identify areas for improvement.</p>
 <hr>
-<p>Source code to be released soon. Image generated with <a href="https://blackforestlabs.ai/#get-flux">FLUX</a>.</p>
+<p>Source code to be released soon. Image generated with <a href="https://blackforestlabs.ai/#get-flux" target="_blank" rel="noopener">FLUX</a>.</p>
 
         </div>
 
         
-        <div class="row pl-3 pr-3">
+        <div class="row ps-3 pe-3">
         
-        <div class="col-md-6 share-buttons">
-        
+          <div class="col-md-6 share-buttons">
+          
           </div>
 
         
@@ -482,11 +598,11 @@ What&rsquo;s striking is how the two summaries share similarities yet diverge in
   
 
   
-    
-    
-  
   
 
+  
+    
+    
   
   
 
@@ -497,9 +613,9 @@ What&rsquo;s striking is how the two summaries share similarities yet diverge in
 <div class="row next-prev-navigator">
   
     <div class="col-md-6 previous-article">
-      <a href="/posts/ways-of-working/remote-work/introduction/" title="Remote Work: An Introduction" class="btn btn-outline-info">
+      <a href="/posts/management/competencies/core-competencies/" title="Core Competencies: An Introduction" class="btn filled-button">
         <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
-        <div class="next-prev-text">Remote Work: An Introduction</div>
+        <div class="next-prev-text">Core Competencies: An Introduction</div>
       </a>
     </div>
   
@@ -509,7 +625,7 @@ What&rsquo;s striking is how the two summaries share similarities yet diverge in
         
       
       <div class="col-md-6 next-article">
-        <a href="/posts/professional/farfetch/conversational-commerce/introduction/" title="Conversational Commerce: An Introduction" class="btn btn-outline-info">
+        <a href="/posts/professional/farfetch/conversational-commerce/introduction/" title="Conversational Commerce: An Introduction" class="btn filled-button">
           <div>Next <i class="fas fa-chevron-circle-right"></i></div>
           <div class="next-prev-text">Conversational Commerce: An Introduction</div>
         </a>
@@ -560,29 +676,15 @@ What&rsquo;s striking is how the two summaries share similarities yet diverge in
     </div>
   </div>
   
-  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
-  
+  <a id="scroll-to-top" class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Scroll to top">
+    <i class="fas fa-chevron-circle-up"></i>
+  </a>
 </section>
 
 
       
       
   <section class="toc-section" id="toc-section">
-    
-    <div class="toc-holder">
-      <h5 class="text-center pl-3">Table of Contents</h5>
-      <hr>
-      <div class="toc">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#facing-the-challenge">Facing the Challenge</a></li>
-    <li><a href="#methods">Methods</a></li>
-    <li><a href="#early-results">Early Results</a></li>
-    <li><a href="#what-is-ahead-of-us">What is ahead of us?</a></li>
-  </ul>
-</nav>
-      </div>
-    </div>
     
   </section>
 
@@ -640,7 +742,7 @@ What&rsquo;s striking is how the two summaries share similarities yet diverge in
 
   <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
     <div class="container pt-5">
-      <div class="row text-left">
+      <div class="row text-start">
         
         <div class="col-md-4 col-sm-12">
           <h5>Navigation</h5>
@@ -723,15 +825,15 @@ What&rsquo;s striking is how the two summaries share similarities yet diverge in
     
     <hr />
     <div class="container">
-      <div class="row text-left">
+      <div class="row text-start">
         <div class="col-md-4">
           <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
-            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            <img src="/images/theme-logo_hu_b3360284c55cf72d.png" alt="Toha Theme Logo">
             Toha
           </a>
         </div>
-        <div class="col-md-4 text-center">© 2024 Copyright.</div>
-        <div class="col-md-4 text-right">
+        <div class="col-md-4 text-center">© 2025 Copyright.</div>
+        <div class="col-md-4 text-end">
           <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
           <img
             src="/images/hugo-logo.svg"
@@ -746,31 +848,11 @@ What&rsquo;s striking is how the two summaries share similarities yet diverge in
   </footer>
 
 
-    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="/js/popper.min.js"></script>
-<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-
-<script type="text/javascript" src="/js/navbar.js"></script>
-<script type="text/javascript" src="/js/plyr.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
-
+    <script src="/application.ae312c614db08a94df766e372bb45a9f16d6a7ce18ed99497bc35e2583ebcf42.js" integrity="sha256-rjEsYU2wipTfdm43K7RanxbWp84Y7ZlJe8NeJYPrz0I=" defer></script>
 
 
     
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-<script src="/js/single.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
-
-
-
-
-
-
-
-
+     
 
     
 </body>

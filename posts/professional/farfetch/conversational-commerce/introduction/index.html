@@ -1,26 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Conversational Commerce: An Introduction</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-
-<link rel="stylesheet" href="/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="/css/layouts/main.css"/>
-<link rel="stylesheet" href="/css/navigators/navbar.css"/>
-<link rel="stylesheet" href="/css/plyr.css"/>
-
-<link rel="stylesheet" href="/css/flag-icon.min.css"/>
-
-
-<link rel="stylesheet" href="/google-fonts/Mulish/mulish.css"/>
-
-
-<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
-
-
+<link rel="stylesheet" href="/application.2fc4cfe7d8e612ccc7ee98a8da8d6b5485d943580b9dd3d034d648b7c254977a.css" integrity="sha256-L8TP59jmEszH7pio2o1rVIXZQ1gLndPQNNZIt8JUl3o=" />
 
 
 
@@ -35,53 +21,77 @@
   
   
 
-  <link rel="icon" type="image/png" href="/images/site/favicon_hu3d9d3e1d12a5bcba2cb6403ce3075488_3189_42x0_resize_box_3.png" />
-
-<meta property="og:title" content="Conversational Commerce: An Introduction" />
-<meta property="og:description" content="An introduction" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rjgsousa.github.io/posts/professional/farfetch/conversational-commerce/introduction/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-04-12T06:00:23+06:00" />
-<meta property="article:modified_time" content="2024-04-12T06:00:23+06:00" />
+  <link rel="icon" type="image/png" href="/images/site/favicon_hu_3eb644c248bc1944.png" />
 
 
-    
+
+
+
+
+
+
+
+
+<meta property="og:title" content="Ricardo G. Sousa"/>
+<meta property="og:type" content="website"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="/">
+<meta property="og:url" content="https://rjgsousa.github.io/">
+
     
 <meta name="description" content="An introduction" />
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
-/>
-<link rel="stylesheet" href="/css/layouts/single.css"/>
-<link rel="stylesheet" href="/css/navigators/sidebar.css">
-
-<link rel="stylesheet" href="/css/style.css"/>
 
 
 
     
 
-
-
-
     
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-10658529-1', 'auto');
-	
-	ga('send', 'pageview');
+        
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+
+            
+            
+            <script defer src='https://analytics.eu.umami.is/script.js' data-website-id="5eea7f3f-34e6-4e69-b7cf-97ceda354beb"></script>
+            
+            
+
+            
+        
+    
+
+
+
+
+
+    <script integrity="sha256-DO4ugzEwhTW1Id1UIWn0gUJWaebCYOypeTit6LW4QB4=">
+     let theme = localStorage.getItem('theme-scheme') || localStorage.getItem('darkmode:color-scheme') || 'light'
+if (theme === 'system') {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    theme = 'dark'
+  } else {
+    theme = 'light'
+  }
 }
-</script>
+document.documentElement.setAttribute('data-theme', theme)
 
-</head>
+    </script>
+    
+  </head>
 
-  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
-    <div class="container-fluid bg-dimmed wrapper">
+  <body class="type-posts kind-page" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="80">
+    <div class="container-fluid bg-secondary wrapper">
       
       
     
@@ -90,10 +100,24 @@ if (!doNotTrack) {
 
 
 
+
+
+
+  
+
+
+
+
+
+
+
+
+
   
 
 
   
+
 
 
 
@@ -113,32 +137,106 @@ if (!doNotTrack) {
   
 
 
-<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar shadow " id="top-navbar">
   <div class="container">
-      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
-      <span class="navbar-toggler-icon"></span>
+    
+    <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
+      <i data-feather="sidebar"></i>
     </button>
+    
     <a class="navbar-brand" href="/">
       
-        <img src="/images/site/favicon_hu3d9d3e1d12a5bcba2cb6403ce3075488_3189_42x0_resize_box_3.png" alt="Logo">
+        <img src="/images/site/favicon_hu_3eb644c248bc1944.png" id="logo" alt="Logo">
       Ricardo G. Sousa</a>
-    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
-      <span class="navbar-toggler-icon"></span>
+    <button
+      class="navbar-toggler navbar-light"
+      id="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#top-nav-items"
+      aria-label="menu"
+    >
+      <i data-feather="menu"></i>
     </button>
 
-    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
-      <ul class="navbar-nav ml-auto">
-      
-      
+    <div class="collapse navbar-collapse dynamic-navbar" id="top-nav-items">
+      <ul class="nav navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/#home">Home</a>
+        </li>
+        
+          
+          
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#about">About</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#projects">Projects</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#recent-posts">Recent Posts</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#publications">Publications</a>
+                </li>
+              
+            
+          
+        
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" id="blog-link" href="/posts">Posts</a>
+          </li>
+        
+        
+        
+        
+        
       </ul>
     </div>
   </div>
   
   
-    <img src="/images/site/favicon_hu3d9d3e1d12a5bcba2cb6403ce3075488_3189_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+    <img src="/images/site/favicon_hu_3eb644c248bc1944.png" class="d-none" id="main-logo" alt="Logo">
   
   
-    <img src="/images/site/favicon_hu3d9d3e1d12a5bcba2cb6403ce3075488_3189_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+    <img src="/images/site/favicon_hu_3eb644c248bc1944.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
   
 </nav>
 
@@ -154,7 +252,7 @@ if (!doNotTrack) {
         </form>
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
-            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <li id="list-heading"><a href="/posts/" data-filter="all">Posts</a></li>
             <div class="subtree">
                 
   
@@ -164,7 +262,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/ways-of-working/">Rules of Engagement</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/management/"> About management</a>
       
       <ul class="">
         
@@ -175,7 +273,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/ways-of-working/meetings/">Meetings</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/management/ways-of-working/"> Rules of Engagement</a>
       
       <ul class="">
         
@@ -185,7 +283,18 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/posts/ways-of-working/meetings/introduction/" title="Introduction">Introduction</a></li>
+    <li>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/management/ways-of-working/meetings/"> Meetings</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/management/ways-of-working/meetings/introduction/" title="Introduction">Introduction</a></li>
   
 
 
@@ -200,7 +309,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/ways-of-working/remote-work/">Remote Work</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/management/ways-of-working/remote-work/"> Remote Work</a>
       
       <ul class="">
         
@@ -210,48 +319,7 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="" href="/posts/ways-of-working/remote-work/introduction/" title="Introduction">Introduction</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/machine-learning/">Machine Learning</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/machine-learning/summarization/">About Summarization</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/machine-learning/summarization/the-potential-of-automated-book-summarization/" title="Introduction">Introduction</a></li>
+    <li><a class=" list-link" href="/posts/management/ways-of-working/remote-work/introduction/" title="Introduction">Introduction</a></li>
   
 
 
@@ -268,13 +336,84 @@ if (!doNotTrack) {
   
   
   
+  
+    
+    <li>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/management/competencies/"> Core Competencies</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/management/competencies/core-competencies/" title="Introduction">Introduction</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/machine-learning/"> Machine Learning</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/machine-learning/summarization/"> About Summarization</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/machine-learning/summarization/the-potential-of-automated-book-summarization/" title="Introduction">Introduction</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
     
     
   
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/professional/">Professional Blogs</a>
+      <i data-feather="minus-circle"></i><a class="active list-link" href="/posts/professional/"> Professional Blogs</a>
       
       <ul class="active">
         
@@ -288,7 +427,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/professional/farfetch/">Professional Blogs @ Farfetch</a>
+      <i data-feather="minus-circle"></i><a class="active list-link" href="/posts/professional/farfetch/"> Farfetch</a>
       
       <ul class="active">
         
@@ -302,7 +441,7 @@ if (!doNotTrack) {
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/professional/farfetch/conversational-commerce/">Conversational Commerce - Professional Blogs from Farfetch</a>
+      <i data-feather="minus-circle"></i><a class="active list-link" href="/posts/professional/farfetch/conversational-commerce/"> Conversational Commerce - Professional Blogs from Farfetch</a>
       
       <ul class="active">
         
@@ -315,7 +454,7 @@ if (!doNotTrack) {
   
   
     
-    <li><a class="active" href="/posts/professional/farfetch/conversational-commerce/introduction/" title="Introduction">Introduction</a></li>
+    <li><a class="active list-link" href="/posts/professional/farfetch/conversational-commerce/introduction/" title="Introduction">Introduction</a></li>
   
 
 
@@ -326,31 +465,6 @@ if (!doNotTrack) {
 
       </ul>
     </li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/competencies/">Core Competencies</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/competencies/core-competencies/" title="Introduction">Introduction</a></li>
   
 
 
@@ -378,29 +492,34 @@ if (!doNotTrack) {
 
       
       <div class="page-content">
-        <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/author/ricardo_hu3c29fa528b1bcf6fc6e2f9d4753cfd22_2037750_120x120_fit_box_3.png' alt="Author Image">
+        
+        <div class="author-profile ms-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/ricardo_hu_b9f320c8061391f0.png' alt="Author Image">
           <h5 class="author-name"></h5>
-          <p>Friday, April 12, 2024</p>
+          <p class="text-muted">Friday, April 12, 2024</p>
         </div>
+        
 
         <div class="title">
           <h1>Conversational Commerce: An Introduction</h1>
         </div>
+
+        
+
         
         <div class="post-content" id="post-content">
           <p>In April 2020 I have started working on a new project to revolutionize how customers shop. For that purpose, we have written a blog post introducing Farfetch Chat (previously known as iFETCH), a conversational AI technology with multimodal capabilities developed by FARFETCH in collaboration with Carnegie Mellon University (CMU), Instituto Superior Técnico (IST), and Universidade Nova de Lisboa (NOVA).</p>
 <p>Farfetch Chat aimed to revolutionize the online high-fashion sector by providing a &ldquo;physical store&rdquo;-like experience through natural interaction using both textual and visual data. The project focused on four pillars: natural language understanding and generation, dialogue management, product catalog and multimodal knowledge base, and product retrieval.</p>
-<p>If you want to learn more, check out our blog post on Farfetch Chat at <a href="https://farfetchtech.medium.com/ifetch-multimodal-conversational-agents-for-the-online-fashion-marketplace-b14ca1bc094">medium</a>. This was the first in a series of posts that provided updates on the progress and developments of this project aimed at transforming the online luxury fashion shopping experience through advanced conversational AI technology.</p>
-<p>(Originally published at <a href="https://www.farfetchtechblog.com">https://www.farfetchtechblog.com</a> on November 4, 2022. <a href="https://web.archive.org/web/20240412103257/https://farfetchtech.medium.com/ifetch-multimodal-conversational-agents-for-the-online-fashion-marketplace-b14ca1bc094">Web Archive</a>)</p>
+<p>If you want to learn more, check out our blog post on Farfetch Chat at <a href="https://farfetchtech.medium.com/ifetch-multimodal-conversational-agents-for-the-online-fashion-marketplace-b14ca1bc094" target="_blank" rel="noopener">medium</a>. This was the first in a series of posts that provided updates on the progress and developments of this project aimed at transforming the online luxury fashion shopping experience through advanced conversational AI technology.</p>
+<p>(Originally published at <a href="https://www.farfetchtechblog.com" target="_blank" rel="noopener">https://www.farfetchtechblog.com</a> on November 4, 2022. <a href="https://web.archive.org/web/20240412103257/https://farfetchtech.medium.com/ifetch-multimodal-conversational-agents-for-the-online-fashion-marketplace-b14ca1bc094" target="_blank" rel="noopener">Web Archive</a>)</p>
 
         </div>
 
         
-        <div class="row pl-3 pr-3">
+        <div class="row ps-3 pe-3">
         
-        <div class="col-md-6 share-buttons">
-        
+          <div class="col-md-6 share-buttons">
+          
           </div>
 
         
@@ -447,11 +566,11 @@ if (!doNotTrack) {
   
 
   
-    
-    
-  
   
 
+  
+    
+    
   
   
 
@@ -459,24 +578,13 @@ if (!doNotTrack) {
 <div class="row next-prev-navigator">
   
     <div class="col-md-6 previous-article">
-      <a href="/posts/machine-learning/summarization/the-potential-of-automated-book-summarization/" title="Automated Book Summarization" class="btn btn-outline-info">
+      <a href="/posts/machine-learning/summarization/the-potential-of-automated-book-summarization/" title="Automated Book Summarization" class="btn filled-button">
         <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
         <div class="next-prev-text">Automated Book Summarization</div>
       </a>
     </div>
   
   
-      
-      
-        
-      
-      <div class="col-md-6 next-article">
-        <a href="/posts/competencies/core-competencies/" title="Core Competencies: An Introduction" class="btn btn-outline-info">
-          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
-          <div class="next-prev-text">Core Competencies: An Introduction</div>
-        </a>
-      </div>
-    
 </div>
 
       <hr />
@@ -522,22 +630,15 @@ if (!doNotTrack) {
     </div>
   </div>
   
-  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
-  
+  <a id="scroll-to-top" class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Scroll to top">
+    <i class="fas fa-chevron-circle-up"></i>
+  </a>
 </section>
 
 
       
       
   <section class="toc-section" id="toc-section">
-    
-    <div class="toc-holder">
-      <h5 class="text-center pl-3">Table of Contents</h5>
-      <hr>
-      <div class="toc">
-        <nav id="TableOfContents"></nav>
-      </div>
-    </div>
     
   </section>
 
@@ -595,7 +696,7 @@ if (!doNotTrack) {
 
   <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
     <div class="container pt-5">
-      <div class="row text-left">
+      <div class="row text-start">
         
         <div class="col-md-4 col-sm-12">
           <h5>Navigation</h5>
@@ -678,15 +779,15 @@ if (!doNotTrack) {
     
     <hr />
     <div class="container">
-      <div class="row text-left">
+      <div class="row text-start">
         <div class="col-md-4">
           <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
-            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            <img src="/images/theme-logo_hu_b3360284c55cf72d.png" alt="Toha Theme Logo">
             Toha
           </a>
         </div>
-        <div class="col-md-4 text-center">© 2024 Copyright.</div>
-        <div class="col-md-4 text-right">
+        <div class="col-md-4 text-center">© 2025 Copyright.</div>
+        <div class="col-md-4 text-end">
           <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
           <img
             src="/images/hugo-logo.svg"
@@ -701,31 +802,11 @@ if (!doNotTrack) {
   </footer>
 
 
-    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="/js/popper.min.js"></script>
-<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-
-<script type="text/javascript" src="/js/navbar.js"></script>
-<script type="text/javascript" src="/js/plyr.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
-
+    <script src="/application.ae312c614db08a94df766e372bb45a9f16d6a7ce18ed99497bc35e2583ebcf42.js" integrity="sha256-rjEsYU2wipTfdm43K7RanxbWp84Y7ZlJe8NeJYPrz0I=" defer></script>
 
 
     
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-<script src="/js/single.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
-
-
-
-
-
-
-
-
+     
 
     
 </body>

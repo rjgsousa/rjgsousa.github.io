@@ -12,7 +12,7 @@
       <pubDate>Wed, 07 Aug 2024 14:00:00 +0100</pubDate>
       
       <guid>https://rjgsousa.github.io/posts/machine-learning/summarization/the-potential-of-automated-book-summarization/</guid>
-      <description>In an era of information abundance, the ability to efficiently extract key insights from vast amounts of text has become an invaluable skill. This is particularly true for books, where complex narratives and intricate arguments can make it challenging to grasp the essence of a work. Consequently, automated book summarization techniques, which employ AI (more recently leveraging the power of Large Language Models (LLMs)) to distill lengthy texts into concise, informative summaries, have emerged as an increasingly reliable resource.</description>
+      <description>&lt;p&gt;In an era of information abundance, the ability to efficiently extract key insights from vast amounts of text has become an invaluable skill. This is particularly true for books, where complex narratives and intricate arguments can make it challenging to grasp the essence of a work. Consequently, automated book summarization techniques, which employ AI (more recently leveraging the power of Large Language Models (LLMs)) to distill lengthy texts into concise, informative summaries, have emerged as an increasingly reliable resource.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -21,55 +21,48 @@
       <pubDate>Fri, 12 Apr 2024 06:00:23 +0600</pubDate>
       
       <guid>https://rjgsousa.github.io/posts/professional/farfetch/conversational-commerce/introduction/</guid>
-      <description>In April 2020 I have started working on a new project to revolutionize how customers shop. For that purpose, we have written a blog post introducing Farfetch Chat (previously known as iFETCH), a conversational AI technology with multimodal capabilities developed by FARFETCH in collaboration with Carnegie Mellon University (CMU), Instituto Superior Técnico (IST), and Universidade Nova de Lisboa (NOVA).
-Farfetch Chat aimed to revolutionize the online high-fashion sector by providing a &amp;ldquo;physical store&amp;rdquo;-like experience through natural interaction using both textual and visual data.</description>
+      <description>&lt;p&gt;In April 2020 I have started working on a new project to revolutionize how customers shop. For that purpose, we have written a blog post introducing Farfetch Chat (previously known as iFETCH), a conversational AI technology with multimodal capabilities developed by FARFETCH in collaboration with Carnegie Mellon University (CMU), Instituto Superior Técnico (IST), and Universidade Nova de Lisboa (NOVA).&lt;/p&gt;
+&lt;p&gt;Farfetch Chat aimed to revolutionize the online high-fashion sector by providing a &amp;ldquo;physical store&amp;rdquo;-like experience through natural interaction using both textual and visual data. The project focused on four pillars: natural language understanding and generation, dialogue management, product catalog and multimodal knowledge base, and product retrieval.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Core Competencies: An Introduction</title>
-      <link>https://rjgsousa.github.io/posts/competencies/core-competencies/</link>
+      <link>https://rjgsousa.github.io/posts/management/competencies/core-competencies/</link>
       <pubDate>Wed, 23 Nov 2022 23:00:23 +0600</pubDate>
       
-      <guid>https://rjgsousa.github.io/posts/competencies/core-competencies/</guid>
-      <description>What core competencies are? How do they enable businesses? Core competencies are a collection of skill sets that help to differentiate a professional and their competitive worth to the business and thus the market. Despite much research, it is still unknown what constitutes a winning formula.
-What should be highlighted is that a company that does not have collaborators who grow around their &amp;ldquo;core competencies&amp;rdquo; is unable to compete and create.</description>
+      <guid>https://rjgsousa.github.io/posts/management/competencies/core-competencies/</guid>
+      <description>&lt;h2 id=&#34;what-core-competencies-are-how-do-they-enable-businesses&#34;&gt;What core competencies are? How do they enable businesses?&lt;/h2&gt;
+&lt;p&gt;Core competencies are a collection of skill sets that help to differentiate a professional and their competitive worth to the business and thus the market. Despite much research, it is still unknown what constitutes a winning formula.&lt;/p&gt;
+&lt;p&gt;What should be highlighted is that a company that does not have collaborators who grow around their &amp;ldquo;core competencies&amp;rdquo; is unable to compete and create. &amp;ldquo;This is a deceptively difficult task.&amp;rdquo; Prahalad says.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Meetings: An Introduction</title>
-      <link>https://rjgsousa.github.io/posts/ways-of-working/meetings/introduction/</link>
+      <link>https://rjgsousa.github.io/posts/management/ways-of-working/meetings/introduction/</link>
       <pubDate>Sun, 22 Nov 2020 06:00:23 +0600</pubDate>
       
-      <guid>https://rjgsousa.github.io/posts/ways-of-working/meetings/introduction/</guid>
-      <description>Before Scheduling a Meeting There are certain preconditions for being successful in what meetings are related. First, remote working guidelines and no meeting day are sufficient but not necessary for a good practice of meetings coordination. Yet, the two patterns mentioned above include rituals that are key to a solid foundation.
-Follows essential principles that you need to have in mind before scheduling a meeting:
-Own your calendar - keep your calendar accurate (even, for the non-meeting event), be conscious of the different timezones;</description>
+      <guid>https://rjgsousa.github.io/posts/management/ways-of-working/meetings/introduction/</guid>
+      <description>&lt;h2 id=&#34;before-scheduling-a-meeting&#34;&gt;Before Scheduling a Meeting&lt;/h2&gt;
+&lt;p&gt;There are certain preconditions for being successful in what meetings are related. First, remote working guidelines and no meeting day are sufficient but not necessary for a good practice of meetings coordination. Yet, the two patterns mentioned above include rituals that are key to a solid foundation.&lt;/p&gt;
+&lt;p&gt;Follows essential principles that you need to have in mind before scheduling a meeting:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Own your calendar&lt;/strong&gt; - keep your calendar accurate (even, for the non-meeting event), be conscious of the different timezones;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Remote Work: An Introduction</title>
-      <link>https://rjgsousa.github.io/posts/ways-of-working/remote-work/introduction/</link>
+      <link>https://rjgsousa.github.io/posts/management/ways-of-working/remote-work/introduction/</link>
       <pubDate>Sun, 25 Oct 2020 06:00:23 +0600</pubDate>
       
-      <guid>https://rjgsousa.github.io/posts/ways-of-working/remote-work/introduction/</guid>
-      <description>Some of us have been forced by the pandemic to work in a new reality. Even though forced work from home != remote work, I would like to reinforce some practices that are in place in workplaces with distributed teams.
-Acknowledgments: This page would not be possible without the collaboration and discussions with Nuno Santos, Silvia Bessa and Ana Rebelo
-Setup Chat Slack, Microsoft Teams, Discord
-Slack/Microsoft Teams are currently the go-to apps for teams communications.</description>
+      <guid>https://rjgsousa.github.io/posts/management/ways-of-working/remote-work/introduction/</guid>
+      <description>&lt;p&gt;Some of us have been forced by the pandemic to work in a new reality. Even though forced work from home != remote work, I would like to reinforce some practices that are in place in workplaces with distributed teams.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Acknowledgments:&lt;/strong&gt; &lt;em&gt;This page would not be possible without the collaboration and discussions with &lt;a href=&#34;https://github.com/NunoFilipeSantos&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nuno Santos&lt;/a&gt;, Silvia Bessa and Ana Rebelo&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;h4 id=&#34;chat&#34;&gt;Chat&lt;/h4&gt;
+&lt;p&gt;Slack, Microsoft Teams, Discord&lt;/p&gt;
+&lt;p&gt;Slack/Microsoft Teams are currently the go-to apps for teams communications. Discord is a great tool for voice. I usually leave it open at certain times of the day for impromptu communications.&lt;/p&gt;</description>
     </item>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
   </channel>

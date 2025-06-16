@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Remote Work on Ricardo G. Sousa</title>
+    <link>https://rjgsousa.github.io/posts/management/ways-of-working/remote-work/</link>
+    <description>Recent content in Remote Work on Ricardo G. Sousa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 25 Oct 2020 06:00:23 +0600</lastBuildDate><atom:link href="https://rjgsousa.github.io/posts/management/ways-of-working/remote-work/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Remote Work: An Introduction</title>
+      <link>https://rjgsousa.github.io/posts/management/ways-of-working/remote-work/introduction/</link>
+      <pubDate>Sun, 25 Oct 2020 06:00:23 +0600</pubDate>
+      
+      <guid>https://rjgsousa.github.io/posts/management/ways-of-working/remote-work/introduction/</guid>
+      <description>&lt;p&gt;Some of us have been forced by the pandemic to work in a new reality. Even though forced work from home != remote work, I would like to reinforce some practices that are in place in workplaces with distributed teams.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Acknowledgments:&lt;/strong&gt; &lt;em&gt;This page would not be possible without the collaboration and discussions with &lt;a href=&#34;https://github.com/NunoFilipeSantos&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nuno Santos&lt;/a&gt;, Silvia Bessa and Ana Rebelo&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;h4 id=&#34;chat&#34;&gt;Chat&lt;/h4&gt;
+&lt;p&gt;Slack, Microsoft Teams, Discord&lt;/p&gt;
+&lt;p&gt;Slack/Microsoft Teams are currently the go-to apps for teams communications. Discord is a great tool for voice. I usually leave it open at certain times of the day for impromptu communications.&lt;/p&gt;</description>
+    </item>
+    
+    
+  </channel>
+</rss>

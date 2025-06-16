@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Professional Blogs - Farfetch on Ricardo G. Sousa</title>
+    <title>Farfetch on Ricardo G. Sousa</title>
     <link>https://rjgsousa.github.io/posts/professional/farfetch/</link>
-    <description>Recent content in Professional Blogs - Farfetch on Ricardo G. Sousa</description>
+    <description>Recent content in Farfetch on Ricardo G. Sousa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 12 Apr 2024 06:00:23 +0600</lastBuildDate><atom:link href="https://rjgsousa.github.io/posts/professional/farfetch/index.xml" rel="self" type="application/rss+xml" /><item>
@@ -12,8 +12,8 @@
       <pubDate>Fri, 12 Apr 2024 06:00:23 +0600</pubDate>
       
       <guid>https://rjgsousa.github.io/posts/professional/farfetch/conversational-commerce/introduction/</guid>
-      <description>In April 2020 I have started working on a new project to revolutionize how customers shop. For that purpose, we have written a blog post introducing Farfetch Chat (previously known as iFETCH), a conversational AI technology with multimodal capabilities developed by FARFETCH in collaboration with Carnegie Mellon University (CMU), Instituto Superior Técnico (IST), and Universidade Nova de Lisboa (NOVA).
-Farfetch Chat aimed to revolutionize the online high-fashion sector by providing a &amp;ldquo;physical store&amp;rdquo;-like experience through natural interaction using both textual and visual data.</description>
+      <description>&lt;p&gt;In April 2020 I have started working on a new project to revolutionize how customers shop. For that purpose, we have written a blog post introducing Farfetch Chat (previously known as iFETCH), a conversational AI technology with multimodal capabilities developed by FARFETCH in collaboration with Carnegie Mellon University (CMU), Instituto Superior Técnico (IST), and Universidade Nova de Lisboa (NOVA).&lt;/p&gt;
+&lt;p&gt;Farfetch Chat aimed to revolutionize the online high-fashion sector by providing a &amp;ldquo;physical store&amp;rdquo;-like experience through natural interaction using both textual and visual data. The project focused on four pillars: natural language understanding and generation, dialogue management, product catalog and multimodal knowledge base, and product retrieval.&lt;/p&gt;</description>
     </item>
     
     
