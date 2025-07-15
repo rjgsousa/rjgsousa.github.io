@@ -2,7 +2,7 @@
 title: "Managing Teams, AI & Analytics in Football"
 menu:
   sidebar:
-    name: football
+    name: Football
     identifier: football-blogs
     weight: 20
 ---

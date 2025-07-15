@@ -14,6 +14,9 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    extensions:
+      extras:
+        footnote: true
   tableOfContents:
     startLevel: 2
     endLevel: 6
@@ -40,15 +43,6 @@ params:
   # background image of the landing page
   background: "images/site/background.jpg"
 
-  features:
-    analytics:
-      enable: true
-      services:
-        umami:
-          scheme: https
-          instance: cloud.umami.is
-          id: 5eea7f3f-34e6-4e69-b7cf-97ceda354beb
-
   # Provide logos for your site. The inverted logo will be used in the initial
   # transparent navbar and the main logo will be used in the non-transparent navbar.
   # It will be the default to the theme logos if not provided.
@@ -60,14 +54,50 @@ params:
   # GitHub repo URL of your site
   gitRepo: https://github.com/rjgsousa
 
-  # specify whether you want to write blog post or not
-  enableBlogPost: true
+  features:
+    analytics:
+      enable: true
+      services:
+        umami:
+          scheme: https
+          instance: cloud.umami.is
+          id: 5eea7f3f-34e6-4e69-b7cf-97ceda354beb
 
-  # specify whether you want to show Table of Contents in reading page
-  enableTOC: true
+    # Enable and configure blog posts
+    blog:
+      enable: true
+      showAuthor: true # shows the author of post (defaults true)
+      # Share post on different social media
+      shareButtons:
+        facebook: true
+        twitter: true
+        linkedin: true
+        reddit: true
+        whatsapp: true
+        email: true
+        # tumblr: true
+        # pocket: true
+        # diaspora: true
+        mastodon: true
+
+    # # Enable & configure "Notes" features
+    # notes:
+    #   enable: true
+    
+    # specify whether you want to show Table of Contents in reading page
+    toc:
+      enable: true
+
+    # Enable reading time support in post cards and in post pages
+    readingTime:
+      enable: false
+
+  # Provide footer configuration.
+  footer:
+    enable: false
 
   # Provide newsletter configuration. This feature hasn't been implemented yet.
   # Currently, you can just hide it from the footer.
-  newsletter:
-    enable: false
+  # newsletter:
+  #   enable: false
 
