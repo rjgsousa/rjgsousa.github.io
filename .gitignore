@@ -1,5 +1,4 @@
 resources/
-public/*
 
 # PyCharm
 # User-specific stuff:
@@ -30,3 +29,4 @@ go.*
 # Temporary lock file while building
 /.hugo_build.lock
 
+public

@@ -1,4 +1,5 @@
 [submodule "public"]
 	path = public
-	url = https://github.com/rjgsousa/rjgsousa.github.io/
+	url = https://github.com/rjgsousa/rjgsousa.github.io
 	branch = master
+	update = merge
