@@ -28,9 +28,6 @@ outputs:
   - RSS
   - JSON
 
-# Enable Disqus forum
-disqusShortname: does-not-exist
-
 # Enable global emoji support
 enableEmoji: true
 
@@ -55,6 +52,12 @@ params:
   gitRepo: https://github.com/rjgsousa
 
   features:
+    comment:
+      enable: false
+      services:
+        disqus:
+          shortname: non-existent
+
     analytics:
       enable: true
       services:
