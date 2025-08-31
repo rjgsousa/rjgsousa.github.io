@@ -1,6 +1,6 @@
 ---
 title: "Curriculum, ATS and LLMs"
-date: 2025-08-30T06:00:23+06:00
+date: 2025-08-31T06:00:23+00:00
 hero: /images/sections/posts/continuum-pulse/career-coach.jpg
 description: Exploring challenges in CV parsing using traditional tools and LLMs, and implementing a vector database solution for career coaching applications
 categories: [machine learning & ai]
