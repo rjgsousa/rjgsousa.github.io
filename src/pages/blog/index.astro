@@ -80,33 +80,47 @@ const categories = Object.keys(postsByCategory).sort();
     const categoryButtons = document.querySelectorAll('[data-category]');
     const postItems = document.querySelectorAll('.post-item');
     
+    // Function to filter posts by category
+    const filterPosts = (category) => {
+      // Update active button
+      categoryButtons.forEach(btn => btn.classList.remove('btn-primary'));
+      categoryButtons.forEach(btn => btn.classList.add('btn-secondary'));
+      
+      const activeButton = document.querySelector(`[data-category="${category}"]`);
+      if (activeButton) {
+        activeButton.classList.remove('btn-secondary');
+        activeButton.classList.add('btn-primary');
+      }
+      
+      // Filter posts
+      postItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (category === 'all' || itemCategory === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    };
+    
+    // Add click handlers to category buttons
     categoryButtons.forEach(button => {
       button.addEventListener('click', () => {
         const category = button.getAttribute('data-category');
-        
-        // Update active button
-        categoryButtons.forEach(btn => btn.classList.remove('btn-primary'));
-        categoryButtons.forEach(btn => btn.classList.add('btn-secondary'));
-        button.classList.remove('btn-secondary');
-        button.classList.add('btn-primary');
-        
-        // Filter posts
-        postItems.forEach(item => {
-          const itemCategory = item.getAttribute('data-category');
-          if (category === 'all' || itemCategory === category) {
-            item.style.display = 'block';
-          } else {
-            item.style.display = 'none';
-          }
-        });
+        filterPosts(category);
       });
     });
     
-    // Set "All Posts" as active by default
-    const allButton = document.querySelector('[data-category="all"]');
-    if (allButton) {
-      allButton.classList.remove('btn-secondary');
-      allButton.classList.add('btn-primary');
+    // Check URL parameters for initial filter
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCategory = urlParams.get('category');
+    
+    if (initialCategory && document.querySelector(`[data-category="${initialCategory}"]`)) {
+      // Filter by URL parameter
+      filterPosts(initialCategory);
+    } else {
+      // Set "All Posts" as active by default
+      filterPosts('all');
     }
   });
 </script>
