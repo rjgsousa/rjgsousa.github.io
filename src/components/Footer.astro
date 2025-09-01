@@ -1,0 +1,49 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  buttonText?: string;
+}
+
+const { 
+  title = "Let's collaborate",
+  description = "Interested in working together on AI projects or discussing research opportunities? I'd love to hear from you.",
+  buttonText = "Get in Touch"
+} = Astro.props;
+---
+
+<section class="section bg-gray-900 text-white">
+  <div class="container text-center">
+    <h2 class="mb-4 text-white">{title}</h2>
+    <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+      {description}
+    </p>
+    <div class="mb-6">
+      <p class="text-gray-300 mb-4">
+        Founder of <a href="https://continuum-pulse.org/" target="_blank" rel="noopener" class="!text-white hover:!text-blue-300 underline">Continuum Pulse</a> - Bridging AI innovation with real-world applications
+      </p>
+    </div>
+    <a id="contact-button" href="#" class="btn bg-white text-gray-900 hover:bg-gray-100">
+      {buttonText}
+    </a>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const contactButton = document.getElementById('contact-button');
+    let emailRevealed = false;
+    
+    contactButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (!emailRevealed) {
+        // First click reveals the email and updates the button
+        const email = 'ricardo' + '@' + 'rsousa.co';
+        contactButton.href = 'mailto:' + email;
+        emailRevealed = true;
+        // Trigger the mailto on the same click
+        window.location.href = contactButton.href;
+      }
+    });
+  });
+</script>
+  </div>
+</section>

@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import PublicationCard from '../components/PublicationCard.astro';
+import { loadPublications, getPublicationsByYear, getPublicationsByType } from '../utils/bibtex-parser';
+import '../styles/global.css';
+
+const publications = loadPublications();
+const publicationsByYear = getPublicationsByYear(publications);
+const publicationsByType = getPublicationsByType(publications);
+
+const years = Object.keys(publicationsByYear).sort((a, b) => parseInt(b) - parseInt(a));
+const types = Object.keys(publicationsByType).sort();
+
+// Stats
+const totalPublications = publications.length;
+const journalArticles = publicationsByType['article']?.length || 0;
+const conferenceProceedings = publicationsByType['inproceedings']?.length || 0;
+const yearRange = years.length > 0 ? `${years[years.length - 1]} - ${years[0]}` : '';
+---
+
+<BaseLayout 
+  title="Academic Publications - Ricardo G. Sousa"
+  description="Academic publications and research contributions in AI, machine learning, and computer vision by Ricardo G. Sousa."
+>
+  <Navigation />
+  
+  <main style="padding-top: 6rem;">
+    <!-- Header Section -->
+    <section class="section-small bg-gray-50">
+      <div class="container text-center">
+        <h1 class="mb-4">Academic Publications</h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          Research contributions in artificial intelligence, machine learning, computer vision, and conversational AI.
+        </p>
+        
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <div class="text-2xl font-bold text-blue-600">{totalPublications}</div>
+            <div class="text-sm text-gray-600">Total Publications</div>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <div class="text-2xl font-bold text-green-600">{journalArticles}</div>
+            <div class="text-sm text-gray-600">Journal Articles</div>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <div class="text-2xl font-bold text-purple-600">{conferenceProceedings}</div>
+            <div class="text-sm text-gray-600">Conference Papers</div>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <div class="text-2xl font-bold text-orange-600">{years.length}</div>
+            <div class="text-sm text-gray-600">Active Years</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="section-small">
+      <div class="container">
+        <div class="flex flex-wrap gap-4 justify-center mb-8">
+          <button class="btn btn-primary" data-filter="all">All Publications</button>
+          <button class="btn btn-secondary" data-filter="year">By Year</button>
+          <button class="btn btn-secondary" data-filter="type">By Type</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications List -->
+    <section class="section">
+      <div class="container max-w-4xl">
+        <!-- All Publications View -->
+        <div id="view-all" class="publication-view">
+          <div class="space-y-6">
+            {publications.map((pub) => (
+              <PublicationCard publication={pub} />
+            ))}
+          </div>
+        </div>
+
+        <!-- By Year View -->
+        <div id="view-year" class="publication-view hidden">
+          {years.map((year) => (
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">{year}</h2>
+              <div class="space-y-6">
+                {publicationsByYear[year].map((pub) => (
+                  <PublicationCard publication={pub} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- By Type View -->
+        <div id="view-type" class="publication-view hidden">
+          {types.map((type) => {
+            const typeLabels = {
+              'article': 'Journal Articles',
+              'inproceedings': 'Conference Papers',
+              'incollection': 'Book Chapters',
+              'proceedings': 'Proceedings',
+            };
+            const typeLabel = typeLabels[type] || type.charAt(0).toUpperCase() + type.slice(1);
+            
+            return (
+              <div class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">{typeLabel}</h2>
+                <div class="space-y-6">
+                  {publicationsByType[type].map((pub) => (
+                    <PublicationCard publication={pub} />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Areas -->
+    <section class="section bg-gray-50">
+      <div class="container text-center">
+        <h2 class="mb-8">Research Areas</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="font-semibold mb-2">Machine Learning</h3>
+            <p class="text-sm text-gray-600">Ordinal classification, transfer learning, and neural networks</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="font-semibold mb-2">Computer Vision</h3>
+            <p class="text-sm text-gray-600">Fashion image analysis, object detection, and medical imaging</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="font-semibold mb-2">Conversational AI</h3>
+            <p class="text-sm text-gray-600">Multimodal agents, intent detection, and slot filling</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="font-semibold mb-2">NLP</h3>
+            <p class="text-sm text-gray-600">Natural language processing and understanding</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  // View switching functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const views = document.querySelectorAll('.publication-view');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+        
+        // Update active button
+        filterButtons.forEach(btn => {
+          btn.classList.remove('btn-primary');
+          btn.classList.add('btn-secondary');
+        });
+        button.classList.remove('btn-secondary');
+        button.classList.add('btn-primary');
+        
+        // Show/hide views
+        views.forEach(view => view.classList.add('hidden'));
+        
+        const targetView = document.getElementById(`view-${filter}`);
+        if (targetView) {
+          targetView.classList.remove('hidden');
+        }
+      });
+    });
+  });
+</script>

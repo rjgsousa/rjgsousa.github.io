@@ -1,0 +1,213 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import '../../styles/global.css';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+};
+
+const category = post.slug.split('/')[0];
+const categoryName = category.charAt(0).toUpperCase() + category.slice(1).replace('-', ' ');
+---
+
+<BaseLayout 
+  title={`${post.data.title} - Ricardo G. Sousa`}
+  description={post.data.description || post.data.title}
+  image={post.data.hero}
+>
+  <Navigation />
+  
+  <main style="padding-top: 6rem;">
+    <!-- Hero Section -->
+    {post.data.hero && (
+      <section class="relative h-96 bg-gray-900 overflow-hidden">
+        <img 
+          src={post.data.hero} 
+          alt={post.data.title}
+          class="w-full h-full object-cover opacity-60"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+      </section>
+    )}
+    
+    <!-- Article Header -->
+    <section class="section-small">
+      <div class="container max-w-4xl">
+        <!-- Breadcrumb -->
+        <nav class="mb-6">
+          <ol class="flex items-center space-x-2 text-sm text-gray-500">
+            <li><a href="/" class="hover:text-gray-700">Home</a></li>
+            <li><span>/</span></li>
+            <li><a href="/blog" class="hover:text-gray-700">Blog</a></li>
+            <li><span>/</span></li>
+            <li class="text-gray-700">{categoryName}</li>
+          </ol>
+        </nav>
+        
+        <!-- Article Meta -->
+        <div class="mb-8">
+          <div class="flex items-center gap-4 mb-4">
+            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
+              {categoryName}
+            </span>
+            <time datetime={post.data.date.toISOString()} class="text-gray-500">
+              {formatDate(post.data.date)}
+            </time>
+          </div>
+          
+          <h1 class="text-4xl font-bold mb-4">{post.data.title}</h1>
+          
+          {post.data.description && (
+            <p class="text-xl text-gray-600 leading-relaxed">
+              {post.data.description}
+            </p>
+          )}
+          
+          {post.data.tags && post.data.tags.length > 0 && (
+            <div class="flex flex-wrap gap-2 mt-6">
+              {post.data.tags.map((tag) => (
+                <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-sm">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+    
+    <!-- Article Content -->
+    <article class="section">
+      <div class="container max-w-4xl">
+        <div class="prose prose-lg prose-gray max-w-none">
+          <Content />
+        </div>
+      </div>
+    </article>
+    
+    <!-- Navigation -->
+    <section class="section-small border-t">
+      <div class="container max-w-4xl">
+        <div class="flex justify-between items-center">
+          <a href="/blog" class="btn btn-secondary">
+            ← Back to Blog
+          </a>
+          
+          <div class="flex gap-4">
+            <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.data.title)}&url=${encodeURIComponent(Astro.url.toString())}`} 
+               target="_blank" 
+               rel="noopener"
+               class="text-gray-500 hover:text-blue-500">
+              Share on Twitter
+            </a>
+            <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(Astro.url.toString())}`} 
+               target="_blank" 
+               rel="noopener"
+               class="text-gray-500 hover:text-blue-700">
+              Share on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .prose {
+    color: #1f2937;
+    line-height: 1.75;
+  }
+  
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    color: #111827;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .prose h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+  }
+  
+  .prose h3 {
+    font-size: 1.25rem;
+  }
+  
+  .prose p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .prose a {
+    color: #2563eb;
+    text-decoration: underline;
+  }
+  
+  .prose a:hover {
+    color: #1d4ed8;
+  }
+  
+  .prose ul, .prose ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .prose blockquote {
+    border-left: 4px solid #d1d5db;
+    padding-left: 1.5rem;
+    font-style: italic;
+    color: #374151;
+    margin: 1.5rem 0;
+  }
+  
+  .prose code {
+    background-color: #f3f4f6;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  }
+  
+  .prose pre {
+    background-color: #111827;
+    color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+  
+  .prose pre code {
+    background-color: transparent;
+    padding: 0;
+  }
+  
+  .prose img {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+  }
+</style>
