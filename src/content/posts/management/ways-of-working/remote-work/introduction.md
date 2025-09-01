@@ -1,7 +1,7 @@
 ---
 title: "Remote Work: An Introduction"
 date: 2020-10-25T06:00:23+06:00
-hero: "/images/sections/posts/remote-work/remote-work.png"
+hero: "../../../../assets/images/sections/posts/remote-work/remote-work.png"
 description: "Tips for remote work and distributed teams"
 categories: ["management"]
 tags: []

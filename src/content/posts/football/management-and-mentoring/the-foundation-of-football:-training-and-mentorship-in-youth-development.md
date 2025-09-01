@@ -1,7 +1,7 @@
 ---
 title: "The Foundation of Football: Training and Mentorship in Youth Development"
 date: 2025-07-14T11:49:00+01:00
-hero: "/images/sections/posts/football/hands-together.jpg"
+hero: "../../../../assets/images/sections/posts/football/hands-together.jpg"
 description: "An Introduction on the Foundation of Football - Training and Mentorship in Youth Development"
 categories: ["leadership", "culture"]
 tags: ["innovation mindset", "growth mindset", "talent development"]

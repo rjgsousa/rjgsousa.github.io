@@ -126,7 +126,7 @@ export function parseBibTeX(content: string): Publication[] {
 
 export function loadPublications(): Publication[] {
   try {
-    const bibPath = path.join(process.cwd(), 'public', 'files', 'publications', 'literature.bib');
+    const bibPath = path.join(process.cwd(), 'assets', 'files', 'publications', 'literature.bib');
     const content = fs.readFileSync(bibPath, 'utf-8');
     return parseBibTeX(content);
   } catch (error) {

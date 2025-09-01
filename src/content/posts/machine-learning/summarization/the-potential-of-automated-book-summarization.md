@@ -1,7 +1,7 @@
 ---
 title: "Automated Book Summarization"
 date: 2024-08-07T14:00:00+01:00
-hero: "/images/sections/posts/machine-learning/book-summarization/open-book-over-tree-stump.jpeg"
+hero: "../../../../assets/images/sections/posts/machine-learning/book-summarization/open-book-over-tree-stump.jpeg"
 description: "An Introduction"
 tags: ["machine-learning", "ai", "llm", "summarization"]
 categories: ["machine-learning"]

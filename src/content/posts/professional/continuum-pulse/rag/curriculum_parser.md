@@ -1,7 +1,7 @@
 ---
 title: "Career Coaching: From LLM Limitations to Vector Solutions in CV Parsing"
 date: 2025-08-31T06:00:23+00:00
-hero: "/images/sections/posts/continuum-pulse/career-coach.jpg"
+hero: "../../../../assets/images/sections/posts/continuum-pulse/career-coach.jpg"
 description: "Exploring challenges in CV parsing using traditional tools and LLMs, and implementing a vector database solution for career coaching applications"
 categories: ["professional"]
 tags: []
