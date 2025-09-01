@@ -4,7 +4,7 @@ date: 2025-06-16T15:00:00+00:00
 hero: "/assets/images/sections/posts/vton/FashionStudioScene.jpeg"
 description: "An introduction"
 categories: ["professional"]
-tags: []
+tags: ["virtual try-on", "retail technology", "ecommerce roi", "fashion tech"]
 ---
 
 
