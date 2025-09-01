@@ -161,12 +161,12 @@ const categoryName = category.charAt(0).toUpperCase() + category.slice(1).replac
   }
   
   .content-wrapper a {
-    color: #2563eb;
+    color: #111827;
     text-decoration: underline;
   }
   
   .content-wrapper a:hover {
-    color: #1d4ed8;
+    color: #374151;
   }
   
   /* Force list styles to override Tailwind reset */
@@ -246,3 +246,32 @@ const categoryName = category.charAt(0).toUpperCase() + category.slice(1).replac
     margin: 2rem 0;
   }
 </style>
+
+<script>
+  // Add umami tracking attributes to external links
+  document.addEventListener('DOMContentLoaded', function() {
+    const contentWrapper = document.querySelector('.content-wrapper');
+    if (!contentWrapper) return;
+    
+    const externalLinks = contentWrapper.querySelectorAll('a[href^="http"]');
+    
+    externalLinks.forEach(link => {
+      const url = link.href;
+      const hostname = new URL(url).hostname;
+      const linkText = link.textContent.trim();
+      
+      // Add umami tracking onclick attribute with domain in event name
+      const eventName = `external-link-${hostname.replace(/\./g, '-')}`;
+      const trackingCall = `umami.track('${eventName}'); return true;`;
+      link.setAttribute('onclick', trackingCall);
+      
+      // Add target="_blank" and rel="noopener" for security if not already present
+      if (!link.target) {
+        link.target = '_blank';
+      }
+      if (!link.rel || !link.rel.includes('noopener')) {
+        link.rel = (link.rel ? link.rel + ' ' : '') + 'noopener';
+      }
+    });
+  });
+</script>

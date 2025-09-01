@@ -59,7 +59,7 @@ In coming postings, I will explore some of my experience to address these hypoth
 [1] - Prahalad, C.K. and Hamel, G. (1990) "The core competence of the corporation”, Harvard Business Review (v. 68, no. 3) pp. 79–91. 
 
 ## Acknowledgments
- I must admit that the exercise that resulted in this document was a lot of fun for me. It allowed me to better organise my thinking, and I am grateful to Rafaela Carvalho, my business partner when I was a data science manager at the time, for challenging me to describe this.
+ I must admit that the exercise that resulted in this document was a lot of fun for me. It allowed me to better organise my thinking, and I am grateful to [Rafaela Carvalho](https://www.linkedin.com/in/rafaelaascarvalho/), my business partner when I was a data science manager at the time, for challenging me to describe this.
 
 Photo by <a href="https://unsplash.com/@cookiethepom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cookie the Pom</a> on <a href="https://unsplash.com/s/photos/skill?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
