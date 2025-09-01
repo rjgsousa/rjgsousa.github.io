@@ -23,20 +23,14 @@ import ricardoImage from '../../assets/images/author/ricardo.png';
               With over a decade of experience in driving the development and successful launch of innovative AI platforms, I bring my passion for leveraging cutting-edge technologies and fostering innovation to help businesses harness the power of AI.
             </p>
             
-            <div class="space-y-4 mb-8">
-              <div class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-blue-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <p class="text-gray-700">Implementing cutting-edge machine learning and computer vision technologies</p>
-              </div>
-              <div class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-blue-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <p class="text-gray-700">Enabling AI platforms that unlock full value of data</p>
-              </div>
-            </div>
+            <ul class="space-y-3 text-gray-700 mb-8" style="list-style-type: '→ '; padding-left: 1.5rem;">
+              <li>
+                Implementing cutting-edge machine learning and computer vision technologies
+              </li>
+              <li>
+                Enabling AI platforms that unlock full value of data
+              </li>
+            </ul>
             
             <div class="flex gap-4">
               <a href="/blog" class="btn btn-primary">Read My Blog</a>
@@ -57,7 +51,7 @@ import ricardoImage from '../../assets/images/author/ricardo.png';
                 
                 <!-- Social Links -->
                 <div class="flex justify-center gap-4">
-                  <a href="mailto:ricardo@rsousa.co" class="text-gray-600 hover:text-blue-600">
+                  <a id="email-link" href="#" class="text-gray-600 hover:text-blue-600">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                       <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
@@ -75,7 +69,24 @@ import ricardoImage from '../../assets/images/author/ricardo.png';
                   </a>
                   <a href="https://masto.ai/@rjgsousa" target="_blank" rel="noopener" class="text-gray-600 hover:text-purple-600">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.545c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054c1.517.363 3.072.546 4.632.546.376 0 .75 0 1.125-.01 1.57-.044 3.224-.124 4.768-.422.038-.008.077-.015.11-.024 2.435-.464 4.753-1.92 4.989-5.604.008-.145.03-1.52.03-1.67.002-.512.167-3.63-.024-5.545zm-3.748 9.195h-2.561V8.29c0-1.309-.55-1.976-1.67-1.976-1.23 0-1.846.79-1.846 2.35v3.403h-2.546V8.663c0-1.56-.617-2.35-1.848-2.35-1.112 0-1.668.668-1.67 1.977v6.218H4.822V8.102c0-1.31.337-2.35 1.011-3.12.696-.77 1.608-1.164 2.74-1.164 1.311 0 2.302.5 2.962 1.498l.638 1.06.638-1.06c.66-.999 1.65-1.498 2.96-1.498 1.13 0 2.043.395 2.74 1.164.675.77 1.012 1.81 1.012 3.12z"/>
+                      <path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.10 20.282 20.282 0 0 1-4.709.545c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054c1.517.363 3.072.546 4.632.546.376 0 .75 0 1.125-.01 1.57-.044 3.224-.124 4.768-.422.038-.008.077-.015.11-.024 2.435-.464 4.753-1.92 4.989-5.604.008-.145.03-1.52.03-1.67.002-.512.167-3.63-.024-5.545zm-3.748 9.195h-2.561V8.29c0-1.309-.55-1.976-1.67-1.976-1.23 0-1.846.79-1.846 2.35v3.403h-2.546V8.663c0-1.56-.617-2.35-1.848-2.35-1.112 0-1.668.668-1.67 1.977v6.218H4.822V8.102c0-1.31.337-2.35 1.011-3.12.696-.77 1.608-1.164 2.74-1.164 1.311 0 2.302.5 2.962 1.498l.638 1.06.638-1.06c.66-.999 1.65-1.498 2.96-1.498 1.13 0 2.043.395 2.74 1.164.675.77 1.012 1.81 1.012 3.12z"/>
+                    </svg>
+                  </a>
+                </div>
+                
+                <!-- Academic Links -->
+                <div class="flex justify-center gap-4 mt-4 pt-4 border-t border-gray-200">
+                  <a href="https://scholar.google.com/citations?user=L1rTgf4AAAAJ&hl=en" target="_blank" rel="noopener" class="text-gray-600 hover:text-blue-600" title="Google Scholar">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+                    </svg>
+                  </a>
+                  <a href="https://dblp.org/pid/163/4234.html" target="_blank" rel="noopener" class="text-gray-600 hover:text-orange-600" title="DBLP">
+                    <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/dblp-512.png" alt="DBLP" class="w-5 h-5" />
+                  </a>
+                  <a href="https://orcid.org/0000-0001-8822-5412" target="_blank" rel="noopener" class="text-gray-600 hover:text-green-600" title="ORCID">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947 0 .525-.422.947-.947.947-.525 0-.946-.422-.946-.947 0-.525.421-.947.946-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c2.359 0 3.81-1.444 3.81-3.722 0-2.016-1.3-3.722-3.81-3.722h-2.297z"/>
                     </svg>
                   </a>
                 </div>
@@ -99,6 +110,9 @@ import ricardoImage from '../../assets/images/author/ricardo.png';
               Helping businesses harness the power of AI through cutting-edge machine learning and computer vision technologies. 
               Focusing on developing innovative AI platforms that unlock the full value of data.
             </p>
+            <p class="text-gray-600 mt-4">
+              Founder of <a href="https://continuum-pulse.org/" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800 underline">Continuum Pulse</a> - Bridging AI innovation with real-world applications.
+            </p>
           </div>
           
           <div class="bg-white p-8 rounded-lg shadow-sm">
@@ -120,8 +134,8 @@ import ricardoImage from '../../assets/images/author/ricardo.png';
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <div class="text-center">
-            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
               </svg>
             </div>
@@ -130,8 +144,8 @@ import ricardoImage from '../../assets/images/author/ricardo.png';
           </div>
           
           <div class="text-center">
-            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
               </svg>
@@ -141,8 +155,8 @@ import ricardoImage from '../../assets/images/author/ricardo.png';
           </div>
           
           <div class="text-center">
-            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
               </svg>
             </div>
@@ -151,8 +165,8 @@ import ricardoImage from '../../assets/images/author/ricardo.png';
           </div>
           
           <div class="text-center">
-            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
               </svg>
             </div>
@@ -165,4 +179,9 @@ import ricardoImage from '../../assets/images/author/ricardo.png';
 
     <Footer />
   </main>
+
+<script>
+  import { setupEmailObfuscation } from '../utils/email-obfuscation';
+  setupEmailObfuscation('email-link');
+</script>
 </BaseLayout>

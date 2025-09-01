@@ -28,22 +28,8 @@ const {
     </a>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const contactButton = document.getElementById('contact-button');
-    let emailRevealed = false;
-    
-    contactButton.addEventListener('click', function(e) {
-      e.preventDefault();
-      if (!emailRevealed) {
-        // First click reveals the email and updates the button
-        const email = 'ricardo' + '@' + 'rsousa.co';
-        contactButton.href = 'mailto:' + email;
-        emailRevealed = true;
-        // Trigger the mailto on the same click
-        window.location.href = contactButton.href;
-      }
-    });
-  });
+  import { setupEmailObfuscation } from '../utils/email-obfuscation';
+  setupEmailObfuscation('contact-button');
 </script>
   </div>
 </section>
