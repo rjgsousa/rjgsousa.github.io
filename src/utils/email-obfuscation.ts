@@ -12,6 +12,10 @@ export function setupEmailObfuscation(elementId: string): void {
         const email = 'ricardo' + '@' + 'rsousa.co';
         emailElement.href = 'mailto:' + email;
         emailRevealed = true;
+        // Track email reveal event
+        if (typeof umami !== 'undefined') {
+          umami.track('email-reveal');
+        }
         // Trigger the mailto on the same click
         window.location.href = emailElement.href;
       }
