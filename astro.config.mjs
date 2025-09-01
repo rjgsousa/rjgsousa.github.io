@@ -7,8 +7,12 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rsousa.co',
+  base: '/',
   integrations: [mdx(), sitemap()],
   vite: {
     plugins: [tailwindcss()]
+  },
+  build: {
+    assets: 'assets'
   }
 });

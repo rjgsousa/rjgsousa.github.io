@@ -8,7 +8,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "test:build": "npm run build",
-    "pre-push": "npm run test:build"
+    "pre-push": "npm run test:build",
+    "deploy": "sh deploy.sh",
+    "deploy:msg": "sh deploy.sh"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.4",
