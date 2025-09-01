@@ -18,6 +18,7 @@
     "@astrojs/sitemap": "^3.5.1",
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.5",
+    "bibtex-js-parser": "^1.1.6",
     "bibtex-parser-js": "^0.0.2",
     "tailwindcss": "^4.1.12"
   }

@@ -19,12 +19,49 @@ interface Publication {
 }
 
 function cleanBibTeXValue(value: string): string {
-  // Remove braces and clean up the value
+  // Remove outer braces and clean up the value
   return value
     .replace(/^{|}$/g, '')
+    // Handle complex LaTeX accent commands like {\'{i}}, {\~{a}}, etc.
+    .replace(/\\['`^~"=.]{\{([^}]*)\}}/g, '$1')
+    .replace(/\{\\['`^~"=.]{([^}]*)\}}/g, '$1')
+    // Handle LaTeX accent commands like \'{e}, \~{a}, \^{o}, etc.
+    .replace(/\\['`^~"=.]{([^}]*)}/g, '$1')
+    // Handle specific LaTeX special characters
+    .replace(/\\i\b/g, 'i')  // \i -> i
+    .replace(/\\o\b/g, 'o')  // \o -> o
+    .replace(/\\l\b/g, 'l')  // \l -> l
+    .replace(/\\ae\b/g, 'æ') // \ae -> æ
+    .replace(/\\oe\b/g, 'œ') // \oe -> œ
+    .replace(/\\ss\b/g, 'ß') // \ss -> ß
+    // Handle general LaTeX commands
     .replace(/\\[a-zA-Z]+{([^}]*)}/g, '$1')
+    // Handle common LaTeX special characters and commands
+    .replace(/\\textbf{([^}]*)}/g, '$1')
+    .replace(/\\textit{([^}]*)}/g, '$1')
+    .replace(/\\emph{([^}]*)}/g, '$1')
+    .replace(/\\url{([^}]*)}/g, '$1')
+    .replace(/\\href{[^}]*}{([^}]*)}/g, '$1')
+    // Handle nested braces more aggressively
+    .replace(/{([^{}]*)}/g, '$1')
+    .replace(/{([^{}]*)}/g, '$1') // Run twice for nested cases
+    // Handle remaining single braces (edge cases)
+    .replace(/[{}]/g, '')
+    // Handle special LaTeX characters
     .replace(/\\\\/g, '')
     .replace(/~/g, ' ')
+    .replace(/\\&/g, '&')
+    .replace(/\\%/g, '%')
+    .replace(/\\\$/g, '$')
+    .replace(/\\#/g, '#')
+    .replace(/\\_/g, '_')
+    // Handle common LaTeX dashes
+    .replace(/---/g, '—')
+    .replace(/--/g, '–')
+    // Clean up any remaining backslashes before letters (leftover LaTeX commands)
+    .replace(/\\([a-zA-Z])/g, '$1')
+    // Clean up whitespace and newlines
+    .replace(/\s+/g, ' ')
     .trim();
 }
 
@@ -66,13 +103,48 @@ export function parseBibTeX(content: string): Publication[] {
       year: '',
     };
     
-    // Parse fields
+    // Parse fields - improved to handle multi-line values
     const entryContent = lines.slice(1).join('\n');
-    const fieldRegex = /(\w+)\s*=\s*{([^}]*(?:{[^}]*}[^}]*)*)}/g;
-    let match;
     
-    while ((match = fieldRegex.exec(entryContent)) !== null) {
-      const [, field, value] = match;
+    // More robust field parsing that handles nested braces and multi-line values
+    const fieldMatches = [];
+    let currentPos = 0;
+    
+    while (currentPos < entryContent.length) {
+      // Find field name
+      const fieldMatch = entryContent.substring(currentPos).match(/(\w+)\s*=\s*{/);
+      if (!fieldMatch) break;
+      
+      const fieldName = fieldMatch[1];
+      const fieldStart = currentPos + fieldMatch.index! + fieldMatch[0].length - 1; // Position of opening brace
+      
+      // Find matching closing brace
+      let braceCount = 0;
+      let valueEnd = fieldStart;
+      
+      for (let i = fieldStart; i < entryContent.length; i++) {
+        if (entryContent[i] === '{') {
+          braceCount++;
+        } else if (entryContent[i] === '}') {
+          braceCount--;
+          if (braceCount === 0) {
+            valueEnd = i;
+            break;
+          }
+        }
+      }
+      
+      if (braceCount === 0) {
+        const fieldValue = entryContent.substring(fieldStart + 1, valueEnd);
+        fieldMatches.push({ field: fieldName, value: fieldValue });
+        currentPos = valueEnd + 1;
+      } else {
+        break; // Malformed entry
+      }
+    }
+    
+    // Process extracted fields
+    for (const { field, value } of fieldMatches) {
       const cleanValue = cleanBibTeXValue(value);
       
       switch (field.toLowerCase()) {

@@ -37,19 +37,19 @@ const yearRange = years.length > 0 ? `${years[years.length - 1]} - ${years[0]}` 
         <!-- Stats -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
           <div class="bg-white p-4 rounded-lg shadow-sm">
-            <div class="text-2xl font-bold text-blue-600">{totalPublications}</div>
+            <div class="text-2xl font-bold text-black">{totalPublications}</div>
             <div class="text-sm text-gray-600">Total Publications</div>
           </div>
           <div class="bg-white p-4 rounded-lg shadow-sm">
-            <div class="text-2xl font-bold text-green-600">{journalArticles}</div>
+            <div class="text-2xl font-bold text-black">{journalArticles}</div>
             <div class="text-sm text-gray-600">Journal Articles</div>
           </div>
           <div class="bg-white p-4 rounded-lg shadow-sm">
-            <div class="text-2xl font-bold text-purple-600">{conferenceProceedings}</div>
+            <div class="text-2xl font-bold text-black">{conferenceProceedings}</div>
             <div class="text-sm text-gray-600">Conference Papers</div>
           </div>
           <div class="bg-white p-4 rounded-lg shadow-sm">
-            <div class="text-2xl font-bold text-orange-600">{years.length}</div>
+            <div class="text-2xl font-bold text-black">{years.length}</div>
             <div class="text-sm text-gray-600">Active Years</div>
           </div>
         </div>
@@ -60,9 +60,9 @@ const yearRange = years.length > 0 ? `${years[years.length - 1]} - ${years[0]}` 
     <section class="section-small">
       <div class="container">
         <div class="flex flex-wrap gap-4 justify-center mb-8">
-          <button class="btn btn-primary" data-filter="all">All Publications</button>
-          <button class="btn btn-secondary" data-filter="year">By Year</button>
-          <button class="btn btn-secondary" data-filter="type">By Type</button>
+          <button class="btn btn-primary" data-filter="all" onclick="umami.track('publications-filter-all')">All Publications</button>
+          <button class="btn btn-secondary" data-filter="year" onclick="umami.track('publications-filter-year')">By Year</button>
+          <button class="btn btn-secondary" data-filter="type" onclick="umami.track('publications-filter-type')">By Type</button>
         </div>
       </div>
     </section>
@@ -101,7 +101,7 @@ const yearRange = years.length > 0 ? `${years[years.length - 1]} - ${years[0]}` 
               'inproceedings': 'Conference Papers',
               'incollection': 'Book Chapters',
               'proceedings': 'Proceedings',
-            };
+            } as any;
             const typeLabel = typeLabels[type] || type.charAt(0).toUpperCase() + type.slice(1);
             
             return (

@@ -86,7 +86,7 @@ const authorsHtml = formatAuthors(publication.authors);
   
   <h3 class="text-xl font-semibold mb-3 leading-tight">
     {publication.url ? (
-      <a href={publication.url} target="_blank" rel="noopener" class="hover:text-blue-600">
+      <a href={publication.url} target="_blank" rel="noopener" class="hover:text-blue-600" onclick={`umami.track('publication-title-click', { paper: '${publication.id}', type: '${publication.type}', year: '${publication.year}' })`}>
         {publication.title}
       </a>
     ) : (
@@ -101,7 +101,7 @@ const authorsHtml = formatAuthors(publication.authors);
   )}
   
   {publication.abstract && (
-    <details class="mb-4">
+    <details class="mb-4" onclick={`umami.track('publication-abstract', { paper: '${publication.id}', type: '${publication.type}' })`}>
       <summary class="cursor-pointer text-blue-600 hover:text-blue-800 font-medium">
         Abstract
       </summary>
@@ -118,6 +118,7 @@ const authorsHtml = formatAuthors(publication.authors);
         target="_blank" 
         rel="noopener"
         class="text-blue-600 hover:text-blue-800 font-medium"
+        onclick={`umami.track('publication-view', { paper: '${publication.id}', type: '${publication.type}', year: '${publication.year}' })`}
       >
         View Paper
       </a>
@@ -129,6 +130,7 @@ const authorsHtml = formatAuthors(publication.authors);
         target="_blank" 
         rel="noopener"
         class="text-blue-600 hover:text-blue-800 font-medium"
+        onclick={`umami.track('publication-doi', { paper: '${publication.id}', doi: '${publication.doi}' })`}
       >
         DOI
       </a>
@@ -137,7 +139,7 @@ const authorsHtml = formatAuthors(publication.authors);
     <!-- BibTeX Citation Button -->
     <button 
       class="text-gray-600 hover:text-gray-800 font-medium"
-      onclick={`navigator.clipboard.writeText('${publication.id}'); alert('Citation ID copied to clipboard!')`}
+      onclick={`navigator.clipboard.writeText('${publication.id}'); alert('Citation ID copied to clipboard!'); umami.track('publication-cite', { paper: '${publication.id}', type: '${publication.type}', year: '${publication.year}' })`}
     >
       Cite
     </button>
