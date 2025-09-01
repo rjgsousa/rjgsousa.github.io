@@ -8,7 +8,7 @@ menu:
     identifier: core-competencies-article
     parent: core-competencies
     weight: 10
-hero: images/sections/posts/competencies/core-competencies/skills.jpg
+hero: /assets/images/sections/posts/competencies/core-competencies/skills.jpg
 ---
 
 ## What core competencies are? How do they enable businesses?
@@ -16,7 +16,7 @@ Core competencies are a collection of skill sets that help to differentiate a pr
 
 What should be highlighted is that a company that does not have collaborators who grow around their "core competencies" is unable to compete and create. "This is a deceptively difficult task." Prahalad says.
 
-{{< img src="images/core-competencies.png" align="center" title="Core Competencies">}}
+![Core Competencies](/assets/images/sections/posts/competencies/core-competencies/core-competencies.png)
 Fig. How competencies are strictly connected with our product development (from [1]).
 
 We will be able to unravel the various portfolios of competences with which our scientists will be gifted by undertaking this exercise. It should be highlighted, however, that there is no expectation of a pre-defined set of competences, and the outcome of this exercise should not be interpreted as a recipe that must be followed. It should be regarded as a resource from which a scientist might advance into specialised areas of competence. In fact, a scientist can be defined in a variety of ways, and we provide the following examples for the purposes of this exercise:
