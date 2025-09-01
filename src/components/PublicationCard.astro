@@ -74,11 +74,24 @@ function formatAuthors(authors: string[]): string {
 const typeLabel = getPublicationTypeLabel(publication.type);
 const venue = getVenue(publication);
 const authorsHtml = formatAuthors(publication.authors);
+
+// Define styling based on publication type
+const getTypeStyle = (type: string) => {
+  if (type === 'article') {
+    return 'px-3 py-1 bg-black text-white rounded-full text-sm font-medium';
+  } else if (type === 'inproceedings') {
+    return 'px-3 py-1 bg-gray-200 text-black rounded-full text-sm font-medium';
+  } else {
+    return 'px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium';
+  }
+};
+
+const typeStyle = getTypeStyle(publication.type);
 ---
 
 <article class="card publication-card">
   <div class="flex items-start justify-between mb-4">
-    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">
+    <span class={typeStyle}>
       {typeLabel}
     </span>
     <span class="text-gray-500 font-medium">{publication.year}</span>
