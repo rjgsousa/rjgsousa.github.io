@@ -1,15 +1,14 @@
 ---
 title: "Conversational Commerce: An Introduction"
 date: 2024-04-12T06:00:23+06:00
-hero: /assets/images/sections/posts/conversational-commerce/farfetch-chat.png
-description: An introduction
-menu:
-  sidebar:
-    name: Introduction
-    identifier: professional-blogs-conversational-commerce-intro-farfetch
-    parent: professional-blogs-conversational-commerce-farfetch
-    weight: 30
+hero: "/assets/images/sections/posts/conversational-commerce/farfetch-chat.png"
+description: "An introduction"
+categories: ["professional"]
+tags: []
 ---
+
+
+
 
 In April 2020 I have started working on a new project to revolutionize how customers shop. For that purpose, we have written a blog post introducing Farfetch Chat (previously known as iFETCH), a conversational AI technology with multimodal capabilities developed by FARFETCH in collaboration with Carnegie Mellon University (CMU), Instituto Superior Técnico (IST), and Universidade Nova de Lisboa (NOVA). 
 

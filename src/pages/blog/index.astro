@@ -1,0 +1,126 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import '../../styles/global.css';
+
+const allPosts = await getCollection('posts');
+const sortedPosts = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+// Group posts by category
+const postsByCategory = sortedPosts.reduce((acc, post) => {
+  const category = post.slug.split('/')[0];
+  if (!acc[category]) {
+    acc[category] = [];
+  }
+  acc[category].push(post);
+  return acc;
+}, {} as Record<string, typeof sortedPosts>);
+
+const categories = Object.keys(postsByCategory).sort();
+---
+
+<BaseLayout 
+  title="Blog - Ricardo G. Sousa"
+  description="Articles and insights on AI, machine learning, management, and technology."
+>
+  <Navigation />
+  
+  <main style="padding-top: 6rem;">
+    <!-- Header Section -->
+    <section class="section-small bg-gray-50">
+      <div class="container text-center">
+        <h1 class="mb-4">Articles & Insights</h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Thoughts on AI, machine learning, technology leadership, and professional development.
+        </p>
+      </div>
+    </section>
+
+    <!-- Categories Filter -->
+    <section class="section-small">
+      <div class="container">
+        <div class="flex flex-wrap gap-4 justify-center mb-8">
+          <button class="btn btn-secondary" data-category="all">All Posts</button>
+          {categories.map((category) => (
+            <button class="btn btn-secondary" data-category={category}>
+              {category.charAt(0).toUpperCase() + category.slice(1).replace('-', ' ')}
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Posts Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-3 gap-8">
+          {sortedPosts.map((post) => (
+            <div class="post-item" data-category={post.slug.split('/')[0]}>
+              <BlogCard
+                title={post.data.title}
+                description={post.data.description}
+                date={post.data.date}
+                slug={post.slug}
+                hero={post.data.hero}
+                tags={post.data.tags}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  // Category filtering functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const categoryButtons = document.querySelectorAll('[data-category]');
+    const postItems = document.querySelectorAll('.post-item');
+    
+    // Function to filter posts by category
+    const filterPosts = (category) => {
+      // Update active button
+      categoryButtons.forEach(btn => btn.classList.remove('btn-primary'));
+      categoryButtons.forEach(btn => btn.classList.add('btn-secondary'));
+      
+      const activeButton = document.querySelector(`[data-category="${category}"]`);
+      if (activeButton) {
+        activeButton.classList.remove('btn-secondary');
+        activeButton.classList.add('btn-primary');
+      }
+      
+      // Filter posts
+      postItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (category === 'all' || itemCategory === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    };
+    
+    // Add click handlers to category buttons
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        filterPosts(category);
+      });
+    });
+    
+    // Check URL parameters for initial filter
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCategory = urlParams.get('category');
+    
+    if (initialCategory && document.querySelector(`[data-category="${initialCategory}"]`)) {
+      // Filter by URL parameter
+      filterPosts(initialCategory);
+    } else {
+      // Set "All Posts" as active by default
+      filterPosts('all');
+    }
+  });
+</script>

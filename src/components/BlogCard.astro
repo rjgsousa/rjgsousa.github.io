@@ -1,0 +1,62 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  date: Date;
+  slug: string;
+  hero?: string;
+  tags?: string[];
+}
+
+const { title, description, date, slug, hero, tags } = Astro.props;
+
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+};
+---
+
+<article class="blog-card">
+  {hero && (
+    <img 
+      src={hero} 
+      alt={title}
+      class="blog-card-image"
+    />
+  )}
+  
+  <div class="blog-card-content">
+    <h3 class="blog-card-title">
+      <a href={`/blog/${slug}`}>
+        {title}
+      </a>
+    </h3>
+    
+    {description && (
+      <p class="blog-card-excerpt">
+        {description}
+      </p>
+    )}
+    
+    <div class="blog-card-meta">
+      <time datetime={date.toISOString()}>
+        {formatDate(date)}
+      </time>
+      
+      <div class="blog-card-tags">
+        {tags && tags.length > 0 ? (
+          tags.slice(0, 3).map((tag) => (
+            <span class="blog-tag">
+              {tag}
+            </span>
+          ))
+        ) : (
+          <div class="blog-tag-spacer"></div>
+        )}
+      </div>
+    </div>
+  </div>
+</article>

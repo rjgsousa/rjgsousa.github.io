@@ -1,0 +1,190 @@
+---
+export interface Publication {
+  id: string;
+  type: string;
+  title: string;
+  authors: string[];
+  year: string;
+  journal?: string;
+  booktitle?: string;
+  publisher?: string;
+  pages?: string;
+  volume?: string;
+  number?: string;
+  url?: string;
+  doi?: string;
+  abstract?: string;
+}
+
+export interface Props {
+  publication: Publication;
+}
+
+const { publication } = Astro.props;
+
+function getPublicationTypeLabel(type: string): string {
+  const typeMap: Record<string, string> = {
+    'article': 'Journal Article',
+    'inproceedings': 'Conference Paper',
+    'incollection': 'Book Chapter',
+    'book': 'Book',
+    'phdthesis': 'PhD Thesis',
+    'mastersthesis': 'Master\'s Thesis',
+    'techreport': 'Technical Report',
+    'proceedings': 'Proceedings',
+  };
+  
+  return typeMap[type] || type.charAt(0).toUpperCase() + type.slice(1);
+}
+
+function getVenue(pub: Publication): string {
+  if (pub.journal) {
+    let venue = pub.journal;
+    if (pub.volume) venue += `, vol. ${pub.volume}`;
+    if (pub.number) venue += `, no. ${pub.number}`;
+    if (pub.pages) venue += `, pp. ${pub.pages}`;
+    return venue;
+  }
+  
+  if (pub.booktitle) {
+    let venue = pub.booktitle;
+    if (pub.pages) venue += `, pp. ${pub.pages}`;
+    return venue;
+  }
+  
+  return pub.publisher || '';
+}
+
+function formatAuthors(authors: string[]): string {
+  if (authors.length === 0) return '';
+  if (authors.length === 1) return authors[0];
+  if (authors.length === 2) return `${authors[0]} and ${authors[1]}`;
+  
+  // Highlight Ricardo G. Sousa
+  const formattedAuthors = authors.map(author => {
+    if (author.includes('Ricardo') && (author.includes('Sousa') || author.includes('Gamelas'))) {
+      return `<strong>${author}</strong>`;
+    }
+    return author;
+  });
+  
+  return formattedAuthors.slice(0, -1).join(', ') + ', and ' + formattedAuthors[formattedAuthors.length - 1];
+}
+
+const typeLabel = getPublicationTypeLabel(publication.type);
+const venue = getVenue(publication);
+const authorsHtml = formatAuthors(publication.authors);
+
+// Define styling based on publication type
+const getTypeStyle = (type: string) => {
+  if (type === 'article') {
+    return 'px-3 py-1 bg-black text-white rounded-full text-sm font-medium';
+  } else if (type === 'inproceedings') {
+    return 'px-3 py-1 bg-gray-200 text-black rounded-full text-sm font-medium';
+  } else {
+    return 'px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium';
+  }
+};
+
+const typeStyle = getTypeStyle(publication.type);
+---
+
+<article class="card publication-card">
+  <div class="flex items-start justify-between mb-4">
+    <span class={typeStyle}>
+      {typeLabel}
+    </span>
+    <span class="text-gray-500 font-medium">{publication.year}</span>
+  </div>
+  
+  <h3 class="text-xl font-semibold mb-3 leading-tight">
+    {publication.url ? (
+      <a href={publication.url} target="_blank" rel="noopener" class="hover:text-blue-600" onclick={`umami.track('publication-title-click', { paper: '${publication.id}', type: '${publication.type}', year: '${publication.year}' })`}>
+        {publication.title}
+      </a>
+    ) : (
+      publication.title
+    )}
+  </h3>
+  
+  <p class="text-gray-600 mb-3" set:html={authorsHtml}></p>
+  
+  {venue && (
+    <p class="text-gray-700 italic mb-4">{venue}</p>
+  )}
+  
+  {publication.abstract && (
+    <details class="mb-4" onclick={`umami.track('publication-abstract', { paper: '${publication.id}', type: '${publication.type}' })`}>
+      <summary class="cursor-pointer text-blue-600 hover:text-blue-800 font-medium">
+        Abstract
+      </summary>
+      <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+        {publication.abstract}
+      </p>
+    </details>
+  )}
+  
+  <div class="flex gap-3 text-sm">
+    {publication.url && (
+      <a 
+        href={publication.url} 
+        target="_blank" 
+        rel="noopener"
+        class="text-blue-600 hover:text-blue-800 font-medium"
+        onclick={`umami.track('publication-view', { paper: '${publication.id}', type: '${publication.type}', year: '${publication.year}' })`}
+      >
+        View Paper
+      </a>
+    )}
+    
+    {publication.doi && (
+      <a 
+        href={`https://doi.org/${publication.doi}`} 
+        target="_blank" 
+        rel="noopener"
+        class="text-blue-600 hover:text-blue-800 font-medium"
+        onclick={`umami.track('publication-doi', { paper: '${publication.id}', doi: '${publication.doi}' })`}
+      >
+        DOI
+      </a>
+    )}
+    
+    <!-- BibTeX Citation Button -->
+    <button 
+      class="text-gray-600 hover:text-gray-800 font-medium"
+      onclick={`navigator.clipboard.writeText('${publication.id}'); alert('Citation ID copied to clipboard!'); umami.track('publication-cite', { paper: '${publication.id}', type: '${publication.type}', year: '${publication.year}' })`}
+    >
+      Cite
+    </button>
+  </div>
+</article>
+
+<style>
+  .publication-card {
+    transition: all 0.3s ease;
+  }
+  
+  .publication-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  details summary {
+    list-style: none;
+  }
+  
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  details summary::before {
+    content: '▶';
+    display: inline-block;
+    margin-right: 0.5rem;
+    transition: transform 0.2s ease;
+  }
+  
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+</style>

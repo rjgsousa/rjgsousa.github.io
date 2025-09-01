@@ -1,0 +1,25 @@
+{
+  "name": "rjgsousa.github.io",
+  "type": "module",
+  "version": "1.0.0-beta.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test:build": "npm run build",
+    "pre-push": "npm run test:build",
+    "deploy": "sh deploy.sh",
+    "deploy:msg": "sh deploy.sh"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.4",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.5.1",
+    "@tailwindcss/vite": "^4.1.12",
+    "astro": "^5.13.5",
+    "bibtex-js-parser": "^1.1.6",
+    "bibtex-parser-js": "^0.0.2",
+    "tailwindcss": "^4.1.12"
+  }
+}

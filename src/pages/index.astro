@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import ricardoImage from '../../assets/images/author/ricardo.png';
+---
+
+<BaseLayout 
+  title="Ricardo G. Sousa - AI Solutions, Research &amp; Entrepreneurship"
+  description="With over a decade of experience in driving the development and successful launch of innovative AI platforms, I bring my passion for leveraging cutting-edge technologies and fostering innovation to help businesses harness the power of AI."
+>
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="section" style="padding-top: 8rem;">
+    <div class="container">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="mb-6">
+          AI solutions that <span class="italic">deliver</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Ricardo G. Sousa is an AI solutions expert helping businesses harness cutting-edge technology, build intelligent platforms, and create memorable experiences.
+        </p>
+        <div class="flex gap-4 justify-center">
+          <a href="/blog" class="btn btn-primary">
+            View Blog
+          </a>
+          <a href="/publications" class="btn btn-secondary">
+            Academic Publications
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section bg-gray-50">
+    <div class="container">
+      <div class="grid grid-2 gap-12 items-center">
+        <div>
+          <h2 class="mb-6">Building lasting partnerships through AI innovation.</h2>
+          <p class="text-lg text-gray-600 mb-6">
+            With over a decade of experience in driving the development and successful launch of innovative AI platforms, I bring my passion for leveraging cutting-edge technologies and fostering innovation to help businesses harness the power of AI.
+          </p>
+          <p class="text-lg text-gray-600 mb-8">
+            I collaborate with ambitious teams to build AI solutions, launch platforms, and design experiences that leave a lasting impact. Here's what I specialize in:
+          </p>
+          <ul class="space-y-3 text-gray-600" style="list-style-type: '→ '; padding-left: 1.5rem;">
+            <li>
+              Implementing cutting-edge machine learning and computer vision technologies
+            </li>
+            <li>
+              Enabling AI platforms that unlock the full value of data
+            </li>
+          </ul>
+        </div>
+        <div class="relative">
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <img 
+              src={ricardoImage.src} 
+              alt="Ricardo G. Sousa" 
+              class="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2">Ricardo G. Sousa</h3>
+            <p class="text-gray-600">AI Solutions Expert, Researcher, and Entrepreneur</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Work Section -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="mb-4">Recent insights and thoughts</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Tips, insights, and stories from the AI and machine learning side of technology. Smart takes on research, industry applications, and innovative solutions.
+        </p>
+      </div>
+      
+      <div class="grid grid-3 gap-8">
+        <!-- Blog posts will be dynamically loaded here -->
+        <div class="card text-center">
+          <div class="card-content-wrapper">
+            <h3 class="text-xl font-semibold mb-4">Latest Blog Posts</h3>
+            <p class="text-gray-600 mb-6">Explore my thoughts on AI, machine learning, and technology leadership.</p>
+          </div>
+          <a href="/blog" class="btn btn-primary">View All Posts</a>
+        </div>
+        
+        <div class="card text-center">
+          <div class="card-content-wrapper">
+            <h3 class="text-xl font-semibold mb-4">Academic Publications</h3>
+            <p class="text-gray-600 mb-6">Research papers and academic contributions in AI and computer vision.</p>
+          </div>
+          <a href="/publications" class="btn btn-primary">View Publications</a>
+        </div>
+        
+        <div class="card text-center">
+          <div class="card-content-wrapper">
+            <h3 class="text-xl font-semibold mb-4">Professional Projects</h3>
+            <p class="text-gray-600 mb-6">Industry applications and innovative AI solutions I've developed.</p>
+          </div>
+          <a href="/blog?category=professional" class="btn btn-primary">View Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer 
+    title="Let's talk!"
+    description="Interested in collaborating on AI projects or discussing research opportunities? I'd love to hear from you."
+  />
+</BaseLayout>

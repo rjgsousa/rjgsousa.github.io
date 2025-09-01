@@ -1,0 +1,277 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import '../../styles/global.css';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+};
+
+const category = post.slug.split('/')[0];
+const categoryName = category.charAt(0).toUpperCase() + category.slice(1).replace('-', ' ');
+---
+
+<BaseLayout 
+  title={`${post.data.title} - Ricardo G. Sousa`}
+  description={post.data.description || post.data.title}
+  image={post.data.hero}
+>
+  <Navigation />
+  
+  <main style="padding-top: 6rem;">
+    <!-- Hero Section -->
+    {post.data.hero && (
+      <section class="relative h-96 bg-gray-900 overflow-hidden">
+        <img 
+          src={post.data.hero} 
+          alt={post.data.title}
+          class="w-full h-full object-cover opacity-60"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+      </section>
+    )}
+    
+    <!-- Article Header -->
+    <section class="section-small">
+      <div class="container max-w-4xl">
+        <!-- Breadcrumb -->
+        <nav class="mb-6">
+          <ol class="flex items-center space-x-2 text-sm text-gray-500">
+            <li><a href="/" class="hover:text-gray-700">Home</a></li>
+            <li><span>/</span></li>
+            <li><a href="/blog" class="hover:text-gray-700">Blog</a></li>
+            <li><span>/</span></li>
+            <li class="text-gray-700">{categoryName}</li>
+          </ol>
+        </nav>
+        
+        <!-- Article Meta -->
+        <div class="mb-8">
+          <div class="flex items-center gap-4 mb-4">
+            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
+              {categoryName}
+            </span>
+            <time datetime={post.data.date.toISOString()} class="text-gray-500">
+              {formatDate(post.data.date)}
+            </time>
+          </div>
+          
+          <h1 class="text-4xl font-bold mb-4">{post.data.title}</h1>
+          
+          {post.data.description && (
+            <p class="text-xl text-gray-600 leading-relaxed">
+              {post.data.description}
+            </p>
+          )}
+          
+          {post.data.tags && post.data.tags.length > 0 && (
+            <div class="flex flex-wrap gap-2 mt-6">
+              {post.data.tags.map((tag) => (
+                <span class="px-3 py-1 bg-black text-white rounded-full text-sm font-medium">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+    
+    <!-- Article Content -->
+    <article class="section">
+      <div class="container max-w-4xl">
+        <div class="max-w-none">
+          <div class="content-wrapper">
+            <Content />
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Navigation -->
+    <section class="section-small border-t">
+      <div class="container max-w-4xl">
+        <div class="flex justify-between items-center">
+          <a href="/blog" class="btn btn-secondary">
+            ← Back to Blog
+          </a>
+          
+          <div class="flex gap-4">
+            <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.data.title)}&url=${encodeURIComponent(Astro.url.toString())}`} 
+               target="_blank" 
+               rel="noopener"
+               class="text-gray-500 hover:text-blue-500">
+              Share on Twitter
+            </a>
+            <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(Astro.url.toString())}`} 
+               target="_blank" 
+               rel="noopener"
+               class="text-gray-500 hover:text-blue-700">
+              Share on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .content-wrapper {
+    color: #1f2937;
+    line-height: 1.75;
+    font-size: 1.125rem;
+  }
+  
+  .content-wrapper h1, .content-wrapper h2, .content-wrapper h3, .content-wrapper h4, .content-wrapper h5, .content-wrapper h6 {
+    color: #111827;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .content-wrapper h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+  }
+  
+  .content-wrapper h3 {
+    font-size: 1.25rem;
+  }
+  
+  .content-wrapper p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .content-wrapper a {
+    color: #111827;
+    text-decoration: underline;
+  }
+  
+  .content-wrapper a:hover {
+    color: #374151;
+  }
+  
+  /* Force list styles to override Tailwind reset */
+  .content-wrapper ol {
+    counter-reset: list-counter;
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+  }
+  
+  .content-wrapper ol li {
+    counter-increment: list-counter;
+    margin-bottom: 0.5rem;
+    padding-left: 2rem;
+    position: relative;
+  }
+  
+  .content-wrapper ol li::before {
+    content: counter(list-counter) ".";
+    position: absolute;
+    left: 0;
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  .content-wrapper ul {
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+  }
+  
+  .content-wrapper ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 2rem;
+    position: relative;
+  }
+  
+  .content-wrapper ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  .content-wrapper blockquote {
+    border-left: 4px solid #d1d5db;
+    padding-left: 1.5rem;
+    font-style: italic;
+    color: #374151;
+    margin: 1.5rem 0;
+  }
+  
+  .content-wrapper code {
+    background-color: #f3f4f6;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  }
+  
+  .content-wrapper pre {
+    background-color: #111827;
+    color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+  
+  .content-wrapper pre code {
+    background-color: transparent;
+    padding: 0;
+  }
+  
+  .content-wrapper img {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+  }
+</style>
+
+<script>
+  // Add umami tracking attributes to external links
+  document.addEventListener('DOMContentLoaded', function() {
+    const contentWrapper = document.querySelector('.content-wrapper');
+    if (!contentWrapper) return;
+    
+    const externalLinks = contentWrapper.querySelectorAll('a[href^="http"]');
+    
+    externalLinks.forEach(link => {
+      const url = link.href;
+      const hostname = new URL(url).hostname;
+      const linkText = link.textContent.trim();
+      
+      // Add umami tracking onclick attribute with domain in event name
+      const eventName = `external-link-${hostname.replace(/\./g, '-')}`;
+      const trackingCall = `umami.track('${eventName}'); return true;`;
+      link.setAttribute('onclick', trackingCall);
+      
+      // Add target="_blank" and rel="noopener" for security if not already present
+      if (!link.target) {
+        link.target = '_blank';
+      }
+      if (!link.rel || !link.rel.includes('noopener')) {
+        link.rel = (link.rel ? link.rel + ' ' : '') + 'noopener';
+      }
+    });
+  });
+</script>

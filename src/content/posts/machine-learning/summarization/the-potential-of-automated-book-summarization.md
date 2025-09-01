@@ -1,15 +1,12 @@
 ---
 title: "Automated Book Summarization"
 date: 2024-08-07T14:00:00+01:00
-hero: /assets/images/sections/posts/machine-learning/book-summarization/open-book-over-tree-stump.jpeg
-description: An Introduction
-menu:
-  sidebar:
-    name: Introduction
-    identifier: machine-learning-book-summarization
-    parent: summarization
-    weight: 30
+hero: "/assets/images/sections/posts/machine-learning/book-summarization/open-book-over-tree-stump.jpeg"
+description: "An Introduction"
+tags: ["machine-learning", "ai", "llm", "summarization"]
+categories: ["machine-learning"]
 ---
+
 
 In an era of information abundance, the ability to efficiently extract key insights from vast amounts of text has become an invaluable skill. This is particularly true for books, where complex narratives and intricate arguments can make it challenging to grasp the essence of a work. Consequently, automated book summarization techniques, which employ AI (more recently leveraging the power of Large Language Models (LLMs)) to distill lengthy texts into concise, informative summaries, have emerged as an increasingly reliable resource.
 

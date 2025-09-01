@@ -1,17 +1,13 @@
 ---
 title: "The Foundation of Football: Training and Mentorship in Youth Development"
 date: 2025-07-14T11:49:00+01:00
-hero: /assets/images/sections/posts/football/hands-together.jpg
-description: An Introduction on the Foundation of Football - Training and Mentorship in Youth Development
-categories: [leadership & culture]
-tags: [innovation mindset, growth mindset, talent development]
-menu:
-  sidebar:
-    name: The Foundation of Football
-    identifier: football-foundation-of-football
-    parent: leadership-mentoring-football
-    weight: 30
+hero: "/assets/images/sections/posts/football/hands-together.jpg"
+description: "An Introduction on the Foundation of Football - Training and Mentorship in Youth Development"
+categories: ["leadership", "culture"]
+tags: ["innovation mindset", "growth mindset", "talent development"]
 ---
+
+
 
 I've always been passionate about nurturing talent through education and training: it's what I love most about my work. Lately, I've been exploring football from a pedagogical angle, fascinated by how this <u>collaborative</u> sport, when properly coached <u>from age six onwards</u> (some clubs start training toddlers as early as 3 years old), develops not just athletic skills but crucial competencies that translate later directly to the business world. This has led me to examine existing training facilities (mostly due geographical reasons **I will focus on Portugal**) and their training methodologies.
 

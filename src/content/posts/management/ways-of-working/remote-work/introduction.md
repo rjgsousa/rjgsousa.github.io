@@ -1,15 +1,14 @@
 ---
 title: "Remote Work: An Introduction"
 date: 2020-10-25T06:00:23+06:00
-hero: /assets/images/sections/posts/remote-work/remote-work.png
-description: Tips for remote work and distributed teams
-menu:
-  sidebar:
-    name: Introduction
-    identifier: how-to-remote-working
-    parent: remote-work
-    weight: 20
+hero: "/assets/images/sections/posts/remote-work/remote-work.png"
+description: "Tips for remote work and distributed teams"
+categories: ["management"]
+tags: []
 ---
+
+
+
 
 Some of us have been forced by the pandemic to work in a new reality. Even though forced work from home != remote work, I would like to reinforce some practices that are in place in workplaces with distributed teams.
 

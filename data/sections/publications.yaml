@@ -86,7 +86,7 @@ publications:
       - name: "Rudnicky, Alexander I."
       - name: "Hauptmann, Alexander G."
     paper:
-        url: "https://rjgsousa.github.io/files/publications/2021.MuCAI.2021.pdf"
+        url: "/src/assets/files/publications/2021.MuCAI.2021.pdf"
     categories: ["machinelearning", "conversational-ai"]
     tags: ["Machine Learning", "Conversational AI"]
 
@@ -101,7 +101,7 @@ publications:
       - name: "Faria, João"
       - name: "Sousa, Ricardo Gamelas"
     paper:
-        url: "https://rjgsousa.github.io/files/publications/2018.BeatrizQuintino.KDD2018.pdf"
+        url: "/src/assets/files/publications/2018.BeatrizQuintino.KDD2018.pdf"
     categories: ["computer-vision"]
     tags: ["Computer Vision", "Image Search", "Online Shopping"]
 
@@ -114,7 +114,7 @@ publications:
       - name: "Cardoso, Jaime S."
       - name: "Sousa, Ricardo Gamelas"
     paper:
-        url: "https://rjgsousa.github.io/files/publications/2011.JaimeCardoso.IJPRAI2011.pdf"
+        url: "/src/assets/files/publications/2011.JaimeCardoso.IJPRAI2011.pdf"
     categories: ["ordinal-learning"]
     tags: ["Machine Learning", "Ordinal Learning", "Metrics"]
 
@@ -128,7 +128,7 @@ publications:
       - name: "Mora, Beatriz"
       - name: "Cardoso, Jaime S."
     paper:
-        url: "https://rjgsousa.github.io/files/publications/2009.RSousa.ICMLA2009.pdf"
+        url: "/src/assets/files/publications/2009.RSousa.ICMLA2009.pdf"
     categories: ["ordinal-learning"]
     tags: ["Machine Learning", "Ordinal Learning", "Metrics"]
 
