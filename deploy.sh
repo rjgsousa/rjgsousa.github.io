@@ -23,6 +23,14 @@ fi
 # Add CNAME for custom domain
 echo "rsousa.co" > CNAME
 
+# Add robots.txt to handle crawling properly
+cat > robots.txt << EOF
+User-agent: *
+Allow: /
+
+Sitemap: https://rsousa.co/sitemap-index.xml
+EOF
+
 # Add changes to git
 git add .
 

@@ -2,6 +2,9 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import { extractHeadings, addHeadingAnchors } from '../../utils/table-of-contents';
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
@@ -25,6 +28,8 @@ const formatDate = (date: Date) => {
 
 const category = post.slug.split('/')[0];
 const categoryName = category.charAt(0).toUpperCase() + category.slice(1).replace('-', ' ');
+
+const headings = extractHeadings(post.body);
 ---
 
 <BaseLayout 
@@ -95,12 +100,29 @@ const categoryName = category.charAt(0).toUpperCase() + category.slice(1).replac
     
     <!-- Article Content -->
     <article class="section">
-      <div class="container max-w-4xl">
-        <div class="max-w-none">
-          <div class="content-wrapper">
-            <Content />
+      <div class="container max-w-6xl">
+        <div class="flex gap-8">
+          <!-- Main Content -->
+          <div class="flex-1 max-w-none">
+            <div class="content-wrapper">
+              <Content />
+            </div>
           </div>
+          
+          <!-- Table of Contents Sidebar -->
+          {headings.length > 0 && (
+            <aside class="w-80 hidden lg:block">
+              <TableOfContents headings={headings} />
+            </aside>
+          )}
         </div>
+        
+        <!-- Mobile TOC -->
+        {headings.length > 0 && (
+          <div class="lg:hidden mb-8">
+            <TableOfContents headings={headings} />
+          </div>
+        )}
       </div>
     </article>
     
@@ -130,6 +152,8 @@ const categoryName = category.charAt(0).toUpperCase() + category.slice(1).replac
       </div>
     </section>
   </main>
+
+  <Footer />
 </BaseLayout>
 
 <style is:global>
@@ -144,6 +168,7 @@ const categoryName = category.charAt(0).toUpperCase() + category.slice(1).replac
     font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    scroll-margin-top: 2rem;
   }
   
   .content-wrapper h2 {
@@ -248,29 +273,58 @@ const categoryName = category.charAt(0).toUpperCase() + category.slice(1).replac
 </style>
 
 <script>
-  // Add umami tracking attributes to external links
+  // Add umami tracking attributes to external links and heading anchors
   document.addEventListener('DOMContentLoaded', function() {
     const contentWrapper = document.querySelector('.content-wrapper');
     if (!contentWrapper) return;
     
+    // Client-side slug generation
+    function generateSlug(text: string): string {
+      return text
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .trim()
+        .replace(/^-|-$/g, '');
+    }
+    
+    // Add heading anchors
+    const headings = contentWrapper.querySelectorAll('h2, h3, h4');
+    headings.forEach(heading => {
+      const text = heading.textContent?.trim() || '';
+      const slug = generateSlug(text);
+      heading.id = slug;
+      
+      const anchor = document.createElement('a');
+      anchor.href = `#${slug}`;
+      anchor.className = 'heading-anchor';
+      anchor.textContent = text;
+      
+      heading.innerHTML = '';
+      heading.appendChild(anchor);
+    });
+    
+    // External links tracking
     const externalLinks = contentWrapper.querySelectorAll('a[href^="http"]');
     
-    externalLinks.forEach(link => {
-      const url = link.href;
+    externalLinks.forEach((link: Element) => {
+      const anchorLink = link as HTMLAnchorElement;
+      const url = anchorLink.href;
       const hostname = new URL(url).hostname;
-      const linkText = link.textContent.trim();
+      const linkText = anchorLink.textContent?.trim() || '';
       
       // Add umami tracking onclick attribute with domain in event name
       const eventName = `external-link-${hostname.replace(/\./g, '-')}`;
       const trackingCall = `umami.track('${eventName}'); return true;`;
-      link.setAttribute('onclick', trackingCall);
+      anchorLink.setAttribute('onclick', trackingCall);
       
       // Add target="_blank" and rel="noopener" for security if not already present
-      if (!link.target) {
-        link.target = '_blank';
+      if (!anchorLink.target) {
+        anchorLink.target = '_blank';
       }
-      if (!link.rel || !link.rel.includes('noopener')) {
-        link.rel = (link.rel ? link.rel + ' ' : '') + 'noopener';
+      if (!anchorLink.rel || !anchorLink.rel.includes('noopener')) {
+        anchorLink.rel = (anchorLink.rel ? anchorLink.rel + ' ' : '') + 'noopener';
       }
     });
   });

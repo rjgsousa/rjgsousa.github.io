@@ -1,0 +1,167 @@
+---
+import type { TocHeading } from '../utils/table-of-contents';
+
+export interface Props {
+  headings: TocHeading[];
+}
+
+const { headings } = Astro.props;
+
+if (!headings || headings.length === 0) {
+  return null;
+}
+---
+
+<nav class="table-of-contents">
+  <h3 class="toc-title">Table of Contents</h3>
+  <ul class="toc-list">
+    {headings.map((heading) => (
+      <li class={`toc-item toc-level-${heading.level}`}>
+        <a href={`#${heading.slug}`} class="toc-link">
+          {heading.text}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  .table-of-contents {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    position: sticky;
+    top: 6rem;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+  }
+
+  .toc-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    color: #111827;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+  }
+
+  .toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+
+  .toc-item {
+    margin: 0;
+    padding: 0;
+  }
+
+  .toc-link {
+    display: block;
+    padding: 0.25rem 0;
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    transition: color 0.2s ease;
+  }
+
+  .toc-link:hover {
+    color: #111827;
+  }
+
+  .toc-level-2 {
+    padding-left: 0;
+  }
+
+  .toc-level-3 {
+    padding-left: 1rem;
+  }
+
+  .toc-level-4 {
+    padding-left: 2rem;
+  }
+
+  .toc-level-3 .toc-link,
+  .toc-level-4 .toc-link {
+    font-size: 0.8125rem;
+    color: #6b7280;
+  }
+
+  @media (max-width: 1024px) {
+    .table-of-contents {
+      position: static;
+      margin: 1.5rem 0;
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const tocLinks = document.querySelectorAll('.toc-link');
+    
+    tocLinks.forEach(link => {
+      link.addEventListener('click', function(this: HTMLAnchorElement, e: Event) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href')?.substring(1);
+        const targetElement = document.getElementById(targetId || '');
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          
+          window.history.pushState(null, '', `#${targetId}`);
+        }
+      });
+    });
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = entry.target.getAttribute('id');
+        const tocLink = document.querySelector(`.toc-link[href="#${id}"]`);
+        
+        if (tocLink) {
+          if (entry.isIntersecting) {
+            tocLink.classList.add('active');
+          } else {
+            tocLink.classList.remove('active');
+          }
+        }
+      });
+    }, {
+      rootMargin: '-20% 0px -70% 0px'
+    });
+    
+    document.querySelectorAll('h2[id], h3[id], h4[id]').forEach(heading => {
+      observer.observe(heading);
+    });
+  });
+</script>
+
+<style is:global>
+  .toc-link.active {
+    color: #111827;
+    font-weight: 600;
+  }
+  
+  .heading-anchor {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .heading-anchor:hover {
+    color: inherit;
+  }
+  
+  h2[id]:hover .heading-anchor::after,
+  h3[id]:hover .heading-anchor::after,
+  h4[id]:hover .heading-anchor::after {
+    content: ' #';
+    color: #9ca3af;
+    font-weight: normal;
+  }
+</style>

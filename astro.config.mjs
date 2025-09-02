@@ -8,6 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://rsousa.co',
   base: '/',
+  trailingSlash: 'never',
   integrations: [mdx(), sitemap()],
   vite: {
     plugins: [tailwindcss()]
