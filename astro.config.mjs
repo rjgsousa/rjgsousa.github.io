@@ -15,10 +15,5 @@ export default defineConfig({
   },
   build: {
     assets: 'assets'
-  },
-  redirects: {
-    '/blog/': '/blog',
-    '/about/': '/about',
-    '/publications/': '/publications'
   }
 });
