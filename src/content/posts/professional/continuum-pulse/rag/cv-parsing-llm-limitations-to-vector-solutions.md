@@ -1,7 +1,7 @@
 ---
 title: "Career Coaching: From LLM Limitations to Vector Solutions in CV Parsing"
 date: 2025-08-31T06:00:23+00:00
-hero: "/assets/images/sections/posts/continuum-pulse/career-coach.jpg"
+hero: "/images/sections/posts/continuum-pulse/career-coach.jpg"
 description: "Exploring challenges in CV parsing using traditional tools and LLMs, and implementing a vector database solution for career coaching applications"
 categories: ["professional"]
 tags: ["document processing", "llm limitations", "pdf parsing", "career tech"]
@@ -17,7 +17,7 @@ This was an exciting project. It was targeting personalized career development i
 ## Pipeline
 Let me start with a quick illustration of the pipeline. Given a CV, it pulls all text from the document, clean and structure the data for later stages of the system.
 
-![CV Parsing Pipeline](/assets/images/sections/posts/continuum-pulse/pipeline-cv-llm.png "CV Parsing Pipeline")
+![CV Parsing Pipeline](/images/sections/posts/continuum-pulse/pipeline-cv-llm.png "CV Parsing Pipeline")
 
 
 ## Processing Curricula Vitarum
