@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-import { setupEmailObfuscation } from '../utils/email-obfuscation.ts';
 ---
 
 <BaseLayout 
@@ -24,13 +23,13 @@ import { setupEmailObfuscation } from '../utils/email-obfuscation.ts';
         </div>
         
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/" class="btn btn-primary" onclick="umami.track('404-home-click')">
+          <a href="/" class="btn btn-primary" onclick="Lit.event('404-home-click')">
             Go Home
           </a>
-          <a href="/blog" class="btn btn-secondary" onclick="umami.track('404-blog-click')">
+          <a href="/blog" class="btn btn-secondary" onclick="Lit.event('404-blog-click')">
             Browse Blog
           </a>
-          <a href="/publications" class="btn btn-secondary" onclick="umami.track('404-publications-click')">
+          <a href="/publications" class="btn btn-secondary" onclick="Lit.event('404-publications-click')">
             View Publications
           </a>
         </div>
@@ -38,7 +37,7 @@ import { setupEmailObfuscation } from '../utils/email-obfuscation.ts';
         <div class="mt-12">
           <p class="text-sm text-gray-500">
             If you believe this is an error, please 
-            <a href="#" id="contact-email-404" class="text-gray-700 underline hover:text-gray-900" onclick="umami.track('404-contact-click')">
+            <a href="#" id="contact-email-404" class="text-gray-700 underline hover:text-gray-900" onclick="Lit.event('404-contact-click')">
               contact me
             </a>.
           </p>
@@ -51,32 +50,40 @@ import { setupEmailObfuscation } from '../utils/email-obfuscation.ts';
 </BaseLayout>
 
 <script>
-  // Import and setup email obfuscation
-  import { setupEmailObfuscation } from '../utils/email-obfuscation.ts';
-  
-  // Track 404 page view with referrer information
   document.addEventListener('DOMContentLoaded', function() {
     const currentPath = window.location.pathname;
     const referrer = document.referrer;
     
-    // Setup email obfuscation
-    setupEmailObfuscation('contact-email-404');
-    
-    // Track the 404 error with details
-    if (typeof umami !== 'undefined') {
-      umami.track('404-error', {
-        path: currentPath,
-        referrer: referrer || 'direct',
-        userAgent: navigator.userAgent.substring(0, 100) // Truncate for storage
+    // Setup email obfuscation for contact link
+    const emailElement = document.getElementById('contact-email-404') as HTMLAnchorElement;
+    if (emailElement) {
+      let emailRevealed = false;
+      
+      emailElement.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (!emailRevealed) {
+          const email = 'ricardo' + '@' + 'rsousa.co';
+          emailElement.href = 'mailto:' + email;
+          emailRevealed = true;
+          if (typeof (window as any).Lit !== 'undefined') {
+            (window as any).Lit.event('email-reveal', { metadata: { source: '404' } });
+          }
+          window.location.href = emailElement.href;
+        }
       });
     }
     
-    // Also log to console for debugging
-    console.log('404 Error tracked:', {
-      path: currentPath,
-      referrer: referrer,
-      timestamp: new Date().toISOString()
-    });
+    // Track the 404 error with details
+    if (typeof (window as any).Lit !== 'undefined') {
+      (window as any).Lit.event('404-error', {
+        metadata: {
+          path: currentPath,
+          referrer: referrer || 'direct',
+          userAgent: navigator.userAgent.substring(0, 100)
+        }
+      });
+    }
+    
   });
 </script>
 

@@ -273,7 +273,7 @@ const headings = extractHeadings(post.body);
 </style>
 
 <script>
-  // Add umami tracking attributes to external links and heading anchors
+  // Add litlyx tracking attributes to external links and heading anchors
   document.addEventListener('DOMContentLoaded', function() {
     const contentWrapper = document.querySelector('.content-wrapper');
     if (!contentWrapper) return;
@@ -314,9 +314,9 @@ const headings = extractHeadings(post.body);
       const hostname = new URL(url).hostname;
       const linkText = anchorLink.textContent?.trim() || '';
       
-      // Add umami tracking onclick attribute with domain in event name
+      // Add litlyx tracking onclick attribute with domain in event name
       const eventName = `external-link-${hostname.replace(/\./g, '-')}`;
-      const trackingCall = `umami.track('${eventName}'); return true;`;
+        const trackingCall = `Lit.event('${eventName}', { metadata: { source: 'blog', url: '${url}' } }); return true;`;
       anchorLink.setAttribute('onclick', trackingCall);
       
       // Add target="_blank" and rel="noopener" for security if not already present

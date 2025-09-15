@@ -99,7 +99,7 @@ const typeStyle = getTypeStyle(publication.type);
   
   <h3 class="text-xl font-semibold mb-3 leading-tight">
     {publication.url ? (
-      <a href={publication.url} target="_blank" rel="noopener" class="hover:text-blue-600" onclick={`umami.track('publication-title-click', { paper: '${publication.id}', type: '${publication.type}', year: '${publication.year}' })`}>
+      <a href={publication.url} target="_blank" rel="noopener" class="hover:text-blue-600" onclick={`Lit.event('publication-title-click', { metadata: { paper: '${publication.id}', type: '${publication.type}', year: '${publication.year}', source: 'publications' } })`}>
         {publication.title}
       </a>
     ) : (
@@ -114,7 +114,7 @@ const typeStyle = getTypeStyle(publication.type);
   )}
   
   {publication.abstract && (
-    <details class="mb-4" onclick={`umami.track('publication-abstract', { paper: '${publication.id}', type: '${publication.type}' })`}>
+    <details class="mb-4" onclick={`Lit.event('publication-abstract', { metadata: { paper: '${publication.id}', type: '${publication.type}', source: 'publications' } })`}>
       <summary class="cursor-pointer text-blue-600 hover:text-blue-800 font-medium">
         Abstract
       </summary>
@@ -131,7 +131,7 @@ const typeStyle = getTypeStyle(publication.type);
         target="_blank" 
         rel="noopener"
         class="text-blue-600 hover:text-blue-800 font-medium"
-        onclick={`umami.track('publication-view', { paper: '${publication.id}', type: '${publication.type}', year: '${publication.year}' })`}
+        onclick={`Lit.event('publication-view', { metadata: { paper: '${publication.id}', type: '${publication.type}', year: '${publication.year}', source: 'publications' } })`}
       >
         View Paper
       </a>
@@ -143,7 +143,7 @@ const typeStyle = getTypeStyle(publication.type);
         target="_blank" 
         rel="noopener"
         class="text-blue-600 hover:text-blue-800 font-medium"
-        onclick={`umami.track('publication-doi', { paper: '${publication.id}', doi: '${publication.doi}' })`}
+        onclick={`Lit.event('publication-doi', { metadata: { paper: '${publication.id}', doi: '${publication.doi}', source: 'publications' } })`}
       >
         DOI
       </a>
@@ -152,7 +152,7 @@ const typeStyle = getTypeStyle(publication.type);
     <!-- BibTeX Citation Button -->
     <button 
       class="text-gray-600 hover:text-gray-800 font-medium"
-      onclick={`navigator.clipboard.writeText('${publication.id}'); alert('Citation ID copied to clipboard!'); umami.track('publication-cite', { paper: '${publication.id}', type: '${publication.type}', year: '${publication.year}' })`}
+      onclick={`navigator.clipboard.writeText('${publication.id}'); alert('Citation ID copied to clipboard!'); Lit.event('publication-cite', { metadata: { paper: '${publication.id}', type: '${publication.type}', year: '${publication.year}', source: 'publications' } })`}
     >
       Cite
     </button>

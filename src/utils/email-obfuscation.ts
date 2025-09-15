@@ -1,6 +1,6 @@
-export function setupEmailObfuscation(elementId: string): void {
+export function setupEmailObfuscation(elementId: string, source: string = 'unknown'): void {
   document.addEventListener('DOMContentLoaded', function() {
-    const emailElement = document.getElementById(elementId);
+    const emailElement = document.getElementById(elementId) as HTMLAnchorElement;
     if (!emailElement) return;
     
     let emailRevealed = false;
@@ -13,8 +13,8 @@ export function setupEmailObfuscation(elementId: string): void {
         emailElement.href = 'mailto:' + email;
         emailRevealed = true;
         // Track email reveal event
-        if (typeof umami !== 'undefined') {
-          umami.track('email-reveal');
+         if (typeof (window as any).Lit !== 'undefined') {
+           (window as any).Lit.event('email-reveal', { metadata: { source: source } });
         }
         // Trigger the mailto on the same click
         window.location.href = emailElement.href;
