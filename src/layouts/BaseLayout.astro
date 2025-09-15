@@ -47,7 +47,13 @@ const normalizedCanonical = canonicalURL.toString().replace(/\/$/, '').replace(/
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     {image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
-    
+
+    <!-- Litlyx Analytics -->
+    <script defer
+        data-workspace = "68c7e90785f2085fcdef9ac5"
+        src="https://cdn.jsdelivr.net/npm/litlyx-js@latest/browser/litlyx.js">
+    </script>
+
     <!-- Umami Analytics -->
     <script async src="https://cloud.umami.is/script.js" data-website-id="5eea7f3f-34e6-4e69-b7cf-97ceda354beb"></script>
   </head>
