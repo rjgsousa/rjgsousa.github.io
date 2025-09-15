@@ -29,8 +29,6 @@ go.*
 # Temporary lock file while building
 /.hugo_build.lock
 
-public
-=======
 # build output
 dist/
 # generated types
