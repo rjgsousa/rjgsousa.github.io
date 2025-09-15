@@ -1,7 +1,7 @@
 ---
 title: "Conversational Commerce: An Introduction"
 date: 2024-04-12T06:00:23+06:00
-hero: "/images/sections/posts/conversational-commerce/farfetch-chat.png"
+hero: "/images/sections/posts/farfetch/conversational-commerce/conversational-commerce.jpg"
 description: "An introduction"
 categories: ["professional"]
 tags: []
